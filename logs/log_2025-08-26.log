@@ -1,0 +1,17 @@
+2025-08-26 16:31:41,187 INFO - Entered the data ingestion method or component
+2025-08-26 16:31:41,213 INFO - Read the dataset as dataframe
+2025-08-26 16:31:41,231 INFO - Train test split initiated
+2025-08-26 16:31:41,256 INFO - Ingestion of the data is completed
+2025-08-26 16:40:39,246 INFO - Entered the data ingestion method or component
+2025-08-26 16:40:39,252 INFO - Read the dataset as dataframe
+2025-08-26 16:40:39,266 INFO - Train test split initiated
+2025-08-26 16:40:39,279 INFO - Ingestion of the data is completed
+2025-08-26 16:59:54,405 INFO - Train and Test data loaded successfully
+2025-08-26 16:59:54,406 INFO - Numerical Columns: ['Age', 'BMI', 'Blood_Pressure_Sys', 'Blood_Pressure_Dia', 'Glucose_Level', 'Cholesterol_Level', 'Physical_Activity_Minutes', 'Alcohol_Intake', 'Creatinine_Level', 'GFR', 'ALT_Level', 'AST_Level', 'Bilirubin_Level', 'Lung_Function_Score', 'Air_Quality_Index', 'Sleep_Hours', 'Stress_Level', 'Genetic_Risk_Score', 'Screen_Time_Hours']
+2025-08-26 16:59:54,406 INFO - Categorical Columns: ['Gender', 'Smoking_Status', 'Family_History', 'Protein_in_Urine']
+2025-08-26 16:59:54,416 INFO - Applying preprocessing on train and test sets
+2025-08-26 16:59:54,441 INFO - Preprocessor saved successfully.
+2025-08-26 17:43:09,771 INFO - Starting model training test...
+2025-08-26 17:43:09,775 INFO - Splitting data into features and targets...
+2025-08-26 17:43:09,775 INFO - Training models without SMOTE (multi-disease support)...
+2025-08-26 17:43:09,775 INFO - Training Logistic Regression...

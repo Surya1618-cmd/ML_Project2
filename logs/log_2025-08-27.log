@@ -1,0 +1,111 @@
+2025-08-27 17:57:42,768 INFO - === Running ModelTrainer as standalone script ===
+2025-08-27 18:15:36,426 INFO - Entered the data ingestion method or component
+2025-08-27 18:15:36,436 INFO - Read the dataset as dataframe
+2025-08-27 18:15:36,443 INFO - Train test split initiated
+2025-08-27 18:15:36,454 INFO - Ingestion of the data is completed
+2025-08-27 18:18:16,087 INFO - Entered the data ingestion method or component
+2025-08-27 18:18:16,093 INFO - Read the dataset as dataframe
+2025-08-27 18:18:16,099 INFO - Train test split initiated
+2025-08-27 18:18:16,108 INFO - Ingestion of the data is completed
+2025-08-27 18:18:16,109 INFO - Reading train and test datasets...
+2025-08-27 18:18:16,147 INFO - Train and test datasets loaded successfully.
+2025-08-27 18:27:57,970 INFO - Read train and test data completed
+2025-08-27 18:27:57,970 INFO - Obtaining preprocessing object
+2025-08-27 18:27:57,970 INFO - Categorical columns: ['gender', 'smoker', 'diabetic']
+2025-08-27 18:27:57,970 INFO - Numerical columns: ['age', 'cholesterol', 'blood_pressure']
+2025-08-27 18:30:32,794 INFO - Read train and test data completed
+2025-08-27 18:30:32,795 INFO - Obtaining preprocessing object
+2025-08-27 18:30:32,795 INFO - Categorical columns: ['gender', 'smoker', 'diabetic']
+2025-08-27 18:30:32,795 INFO - Numerical columns: ['age', 'cholesterol', 'blood_pressure']
+2025-08-27 18:35:29,598 INFO - Reading train and test data...
+2025-08-27 18:35:29,602 INFO - Starting data cleaning...
+2025-08-27 18:35:29,611 INFO - Removed 22 duplicate rows.
+2025-08-27 18:35:29,612 INFO - Null values handled.
+2025-08-27 18:35:29,626 INFO - Outliers handled using IQR method.
+2025-08-27 18:35:29,626 INFO - Starting data cleaning...
+2025-08-27 18:35:29,628 INFO - Removed 25 duplicate rows.
+2025-08-27 18:35:29,638 INFO - Null values handled.
+2025-08-27 18:35:29,651 INFO - Outliers handled using IQR method.
+2025-08-27 18:35:29,651 INFO - Splitting input and target features...
+2025-08-27 18:45:21,682 INFO - Starting data transformation
+2025-08-27 18:45:21,682 INFO - Reading dataset from: Raw_data\health_dataset_with_issues.csv
+2025-08-27 18:45:21,688 INFO - Cleaning dataset...
+2025-08-27 18:45:21,695 INFO - Removed 68 duplicate rows
+2025-08-27 18:45:21,704 INFO - Filled 12 missing values
+2025-08-27 18:45:21,714 INFO - Data cleaning completed
+2025-08-27 18:47:15,598 INFO - Starting data transformation
+2025-08-27 18:47:15,598 INFO - Reading dataset from: Raw_data\health_dataset_with_issues.csv
+2025-08-27 18:47:15,601 INFO - Cleaning dataset...
+2025-08-27 18:47:15,603 INFO - Removed 68 duplicate rows
+2025-08-27 18:47:15,610 INFO - Filled 12 missing values
+2025-08-27 18:47:15,626 INFO - Data cleaning completed
+2025-08-27 18:49:38,896 INFO - Starting data transformation...
+2025-08-27 18:49:38,896 INFO - Reading dataset from: Raw_data\health_dataset_with_issues.csv
+2025-08-27 18:49:38,899 INFO - Cleaning dataset...
+2025-08-27 18:49:38,901 INFO - Removed 68 duplicate rows
+2025-08-27 18:49:38,907 INFO - Missing values handled
+2025-08-27 18:49:38,914 INFO - Outliers capped
+2025-08-27 18:56:13,404 INFO - Loading dataset from Raw_data/health_dataset_with_issues.csv
+2025-08-27 18:56:13,407 INFO - Cleaning data...
+2025-08-27 18:56:13,417 INFO - Data cleaning complete.
+2025-08-27 18:56:13,419 INFO - Numeric columns: ['Age', 'Height_cm', 'Weight_kg', 'Blood_Pressure', 'Cholesterol']
+2025-08-27 18:56:13,419 INFO - Categorical columns: ['Gender']
+2025-08-27 18:56:13,419 INFO - Splitting dataset for internal validation only
+2025-08-27 18:56:13,421 INFO - Fitting preprocessor to training data
+2025-08-27 18:56:13,432 INFO - Processor saved successfully at 'artifacts/processor.pkl'
+2025-08-27 19:10:14,093 ERROR - Training failed: cannot import name 'load_numpy_arrays' from 'src.utils' (C:\Users\yedug\Desktop\ML_Project\src\utils.py)
+2025-08-27 19:11:22,174 ERROR - Training failed: [Errno 2] No such file or directory: 'artifacts/train.npy'
+2025-08-27 19:16:40,052 INFO - Loading dataset...
+2025-08-27 19:16:40,053 ERROR - Training failed: Error in C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py , line 35 : [Errno 2] No such file or directory: 'Raw_data/train.csv'
+2025-08-27 19:20:21,089 INFO - Loading dataset...
+2025-08-27 19:20:21,105 INFO - Features: ['Age', 'Gender', 'Height_cm', 'Weight_kg', 'Blood_Pressure', 'Cholesterol']
+2025-08-27 19:20:21,105 INFO - Targets: ['Diabetes', 'Heart_Disease', 'Liver_Disease', 'Respiratory_Disease', 'Cancer']
+2025-08-27 19:20:21,107 ERROR - Training failed: Error in C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py , line 52 : could not convert string to float: 'Female'
+2025-08-27 19:22:32,791 INFO - Loading dataset...
+2025-08-27 19:22:32,801 INFO - Features: ['Age', 'Height_cm', 'Weight_kg', 'Blood_Pressure', 'Cholesterol', 'Gender_Male', 'Gender_Other']
+2025-08-27 19:22:32,802 INFO - Targets: ['Diabetes', 'Heart_Disease', 'Liver_Disease', 'Respiratory_Disease', 'Cancer']
+2025-08-27 19:22:32,805 INFO - Evaluating models...
+2025-08-27 19:26:08,511 INFO - Loading dataset...
+2025-08-27 19:26:08,524 INFO - Features: ['Age', 'Height_cm', 'Weight_kg', 'Blood_Pressure', 'Cholesterol', 'Gender_Male', 'Gender_Other']
+2025-08-27 19:26:08,524 INFO - Targets: ['Diabetes', 'Heart_Disease', 'Liver_Disease', 'Respiratory_Disease', 'Cancer']
+2025-08-27 19:26:08,528 INFO - Evaluating models...
+2025-08-27 19:27:44,260 INFO - Loading dataset...
+2025-08-27 19:27:44,286 INFO - Features: ['Age', 'Height_cm', 'Weight_kg', 'Blood_Pressure', 'Cholesterol', 'Gender_Male', 'Gender_Other']
+2025-08-27 19:27:44,287 INFO - Targets: ['Diabetes', 'Heart_Disease', 'Liver_Disease', 'Respiratory_Disease', 'Cancer']
+2025-08-27 19:27:44,294 INFO - Evaluating models...
+2025-08-27 19:37:00,565 ERROR - Training failed: Error in C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py , line 101 : Error in C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py : CustomException.__init__() missing 1 required positional argument: 'error_detail'
+2025-08-27 19:39:16,453 INFO - Loading dataset...
+2025-08-27 19:39:16,460 INFO - Features: ['Age', 'Height_cm', 'Weight_kg', 'Blood_Pressure', 'Cholesterol', 'Gender_Male', 'Gender_Other']
+2025-08-27 19:39:16,460 INFO - Targets: ['Diabetes', 'Heart_Disease', 'Liver_Disease', 'Respiratory_Disease', 'Cancer']
+2025-08-27 19:39:16,463 INFO - Evaluating models...
+2025-08-27 19:46:31,239 ERROR - Training failed: Error in C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py , line 101 : 'NoneType' object has no attribute 'tb_frame'
+2025-08-27 19:49:28,293 INFO - Loading dataset...
+2025-08-27 19:49:28,300 INFO - Features: ['Age', 'Height_cm', 'Weight_kg', 'Blood_Pressure', 'Cholesterol', 'Gender_Male', 'Gender_Other']
+2025-08-27 19:49:28,300 INFO - Targets: ['Diabetes', 'Heart_Disease', 'Liver_Disease', 'Respiratory_Disease', 'Cancer']
+2025-08-27 19:49:28,301 INFO - Evaluating models...
+2025-08-27 19:55:49,718 ERROR - Training failed: Error in C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py , line 101 : 'NoneType' object has no attribute 'tb_frame'
+2025-08-27 20:01:16,596 INFO - Loading dataset...
+2025-08-27 20:14:44,708 INFO - Entered the data ingestion method or component
+2025-08-27 20:14:44,720 INFO - Read the dataset as dataframe
+2025-08-27 20:14:44,727 INFO - Train test split initiated
+2025-08-27 20:14:44,735 INFO - Ingestion of the data is completed
+2025-08-27 20:24:27,820 INFO - Entered the data ingestion method or component
+2025-08-27 20:24:27,830 INFO - Read the dataset as dataframe
+2025-08-27 20:24:27,837 INFO - Train test split initiated
+2025-08-27 20:24:27,846 INFO - Ingestion of the data is completed
+2025-08-27 20:24:27,872 INFO - Read train and test data completed
+2025-08-27 20:24:27,872 INFO - Obtaining preprocessing object
+2025-08-27 20:24:27,872 INFO - Categorical columns: ['Sex', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'FamilyHistory']
+2025-08-27 20:24:27,872 INFO - Numerical columns: ['Age', 'BMI', 'GlucoseLevel', 'CholesterolLevel']
+2025-08-27 20:24:27,888 INFO - Applying preprocessing object on training and testing data
+2025-08-27 20:24:27,909 INFO - Saved preprocessing object
+2025-08-27 20:28:00,630 INFO - Loading dataset...
+2025-08-27 20:43:42,284 INFO - \u2705 Dataset loaded
+2025-08-27 20:45:05,559 INFO - \u2705 Dataset loaded
+2025-08-27 20:46:37,903 INFO - \u2705 Dataset loaded
+2025-08-27 21:01:40,324 INFO - Loading training and test data
+2025-08-27 21:01:40,356 INFO - Initializing models and parameters
+2025-08-27 21:01:40,356 INFO - Evaluating models to find the best one
+2025-08-27 21:08:42,064 INFO - Loading training and test data
+2025-08-27 21:08:42,104 INFO - Initializing models and parameters
+2025-08-27 21:08:42,105 INFO - Evaluating models to find the best one

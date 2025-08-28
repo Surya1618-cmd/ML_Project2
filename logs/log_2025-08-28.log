@@ -1,0 +1,1601 @@
+2025-08-28 14:34:58,517 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 14:34:58,519 INFO - model_trainer - Starting model training process.
+2025-08-28 14:34:58,519 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 14:34:58,553 INFO - model_trainer - Columns in train_df BEFORE any processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:34:58,553 INFO - model_trainer - Columns in test_df BEFORE any processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:34:58,564 INFO - model_trainer - Missing values filled.
+2025-08-28 14:34:58,576 INFO - model_trainer - Categorical features encoded.
+2025-08-28 14:34:58,581 INFO - model_trainer - Data split into features and targets.
+2025-08-28 14:34:58,581 ERROR - model_trainer - Error in initiate_model_trainer function: evaluate_models() got an unexpected keyword argument 'params'. Did you mean 'param'?
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py", line 124, in initiate_model_trainer
+    model_report: dict = evaluate_classification_models(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        X_train=X_train,
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        params=params
+        ^^^^^^^^^^^^^
+    )
+    ^
+TypeError: evaluate_models() got an unexpected keyword argument 'params'. Did you mean 'param'?
+2025-08-28 14:36:47,756 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 14:36:47,757 INFO - model_trainer - Starting model training process.
+2025-08-28 14:36:47,757 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 14:36:47,763 INFO - model_trainer - Columns in train_df BEFORE any processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:36:47,763 INFO - model_trainer - Columns in test_df BEFORE any processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:36:47,769 INFO - model_trainer - Missing values filled.
+2025-08-28 14:36:47,776 INFO - model_trainer - Categorical features encoded.
+2025-08-28 14:36:47,778 INFO - model_trainer - Data split into features and targets.
+2025-08-28 14:36:47,791 ERROR - model_trainer - Error in initiate_model_trainer function: Error in C:\Users\yedug\Desktop\ML_Project\src\utils.py , line 34 : Invalid parameter 'estimator' for estimator RandomForestClassifier(). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 34, in evaluate_models
+    gs.fit(X_train,y_train)
+    ~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1024, in fit
+    self._run_search(evaluate_candidates)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1571, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 970, in evaluate_candidates
+    out = parallel(
+        delayed(_fit_and_score)(
+    ...<13 lines>...
+        )
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 854, in _fit_and_score
+    estimator = estimator.set_params(**clone(parameters, safe=False))
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 283, in set_params
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Invalid parameter 'estimator' for estimator RandomForestClassifier(). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py", line 124, in initiate_model_trainer
+    model_report: dict = evaluate_classification_models(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        X_train=X_train,
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        param=params # Changed 'params' to 'param' here
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 54, in evaluate_models
+    raise CustomException(e, sys)
+src.exception.CustomException: Error in C:\Users\yedug\Desktop\ML_Project\src\utils.py , line 34 : Invalid parameter 'estimator' for estimator RandomForestClassifier(). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+2025-08-28 14:39:18,072 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 14:39:18,072 INFO - model_trainer - Starting model training process.
+2025-08-28 14:39:18,072 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 14:39:18,079 INFO - model_trainer - Columns in train_df BEFORE any processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:39:18,079 INFO - model_trainer - Columns in test_df BEFORE any processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:39:18,086 INFO - model_trainer - Missing values filled.
+2025-08-28 14:39:18,098 INFO - model_trainer - Categorical features encoded.
+2025-08-28 14:39:18,102 INFO - model_trainer - Data split into features and targets.
+2025-08-28 14:39:18,102 ERROR - model_trainer - Error in initiate_model_trainer function: evaluate_models() got an unexpected keyword argument 'params'. Did you mean 'param'?
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py", line 125, in initiate_model_trainer
+    model_report: dict = evaluate_classification_models(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        X_train=X_train,
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        params=params # Changed 'param' back to 'params' as the function definition uses 'params'
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: evaluate_models() got an unexpected keyword argument 'params'. Did you mean 'param'?
+2025-08-28 14:41:32,772 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 14:41:32,773 INFO - model_trainer - Starting model training process.
+2025-08-28 14:41:32,773 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 14:41:32,779 INFO - model_trainer - Columns in train_df BEFORE any processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:41:32,779 INFO - model_trainer - Columns in test_df BEFORE any processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:41:32,783 INFO - model_trainer - Missing values filled.
+2025-08-28 14:41:32,791 INFO - model_trainer - Categorical features encoded.
+2025-08-28 14:41:32,792 INFO - model_trainer - Data split into features and targets.
+2025-08-28 14:41:32,793 ERROR - model_trainer - Error in initiate_model_trainer function: evaluate_models() got an unexpected keyword argument 'params'. Did you mean 'param'?
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py", line 125, in initiate_model_trainer
+    model_report: dict = evaluate_classification_models(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        X_train=X_train,
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        params=params # Changed 'param' back to 'params' as the function definition uses 'params'
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: evaluate_models() got an unexpected keyword argument 'params'. Did you mean 'param'?
+2025-08-28 14:50:04,038 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 14:50:04,039 INFO - model_trainer - Starting model training process.
+2025-08-28 14:50:04,039 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 14:50:04,048 INFO - model_trainer - Loaded train_df with shape (800, 22) and test_df with shape (200, 22)
+2025-08-28 14:50:04,048 INFO - model_trainer - Columns in train_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:50:04,049 INFO - model_trainer - Columns in test_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:50:04,054 INFO - model_trainer - Missing values filled using ffill.
+2025-08-28 14:50:04,060 INFO - model_trainer - Categorical features encoded.
+2025-08-28 14:50:04,062 INFO - model_trainer - Data split. X_train shape: (800, 17), y_train shape: (800, 5)
+2025-08-28 14:50:04,063 INFO - model_trainer - X_test shape: (200, 17), y_test shape: (200, 5)
+2025-08-28 14:50:04,063 INFO - model_trainer - Evaluating models with GridSearchCV...
+2025-08-28 14:50:04,063 INFO - utils - Starting model evaluation in utils.py...
+2025-08-28 14:50:04,063 INFO - utils - Evaluating model: RandomForest
+2025-08-28 14:50:04,063 INFO - utils - Applying GridSearchCV for RandomForest with params: {'n_estimators': [50, 100], 'max_depth': [None, 10]}
+2025-08-28 14:50:09,647 INFO - utils - Best parameters for RandomForest: {'max_depth': None, 'n_estimators': 50}
+2025-08-28 14:50:10,158 INFO - utils - Model RandomForest - Train F1-score: 1.0000, Test F1-score: 0.5096
+2025-08-28 14:50:10,158 INFO - utils - Evaluating model: HistGradientBoosting
+2025-08-28 14:50:10,159 INFO - utils - Applying GridSearchCV for HistGradientBoosting with params: {'max_iter': [100, 200], 'max_depth': [None, 10]}
+2025-08-28 14:50:10,273 ERROR - utils - Error during model evaluation: 
+All the 12 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+8 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 539, in fit
+    y = _check_y(y, estimator=self)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1408, in _check_y
+    y = column_or_1d(y, warn=True)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1485, in column_or_1d
+    raise ValueError(
+        "y should be a 1d array, got an array of shape {} instead.".format(shape)
+    )
+ValueError: y should be a 1d array, got an array of shape (533, 5) instead.
+
+--------------------------------------------------------------------------------
+4 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 539, in fit
+    y = _check_y(y, estimator=self)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1408, in _check_y
+    y = column_or_1d(y, warn=True)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1485, in column_or_1d
+    raise ValueError(
+        "y should be a 1d array, got an array of shape {} instead.".format(shape)
+    )
+ValueError: y should be a 1d array, got an array of shape (534, 5) instead.
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 41, in evaluate_models
+    gs.fit(X_train, y_train)
+    ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1024, in fit
+    self._run_search(evaluate_candidates)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1571, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1001, in evaluate_candidates
+    _warn_or_raise_about_fit_failures(out, self.error_score)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 517, in _warn_or_raise_about_fit_failures
+    raise ValueError(all_fits_failed_message)
+ValueError: 
+All the 12 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+8 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 539, in fit
+    y = _check_y(y, estimator=self)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1408, in _check_y
+    y = column_or_1d(y, warn=True)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1485, in column_or_1d
+    raise ValueError(
+        "y should be a 1d array, got an array of shape {} instead.".format(shape)
+    )
+ValueError: y should be a 1d array, got an array of shape (533, 5) instead.
+
+--------------------------------------------------------------------------------
+4 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 539, in fit
+    y = _check_y(y, estimator=self)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1408, in _check_y
+    y = column_or_1d(y, warn=True)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1485, in column_or_1d
+    raise ValueError(
+        "y should be a 1d array, got an array of shape {} instead.".format(shape)
+    )
+ValueError: y should be a 1d array, got an array of shape (534, 5) instead.
+
+2025-08-28 14:50:10,278 ERROR - model_trainer - Error in initiate_model_trainer function: Error in C:\Users\yedug\Desktop\ML_Project\src\utils.py , line 41 : 
+All the 12 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+8 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 539, in fit
+    y = _check_y(y, estimator=self)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1408, in _check_y
+    y = column_or_1d(y, warn=True)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1485, in column_or_1d
+    raise ValueError(
+        "y should be a 1d array, got an array of shape {} instead.".format(shape)
+    )
+ValueError: y should be a 1d array, got an array of shape (533, 5) instead.
+
+--------------------------------------------------------------------------------
+4 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 539, in fit
+    y = _check_y(y, estimator=self)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1408, in _check_y
+    y = column_or_1d(y, warn=True)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1485, in column_or_1d
+    raise ValueError(
+        "y should be a 1d array, got an array of shape {} instead.".format(shape)
+    )
+ValueError: y should be a 1d array, got an array of shape (534, 5) instead.
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 41, in evaluate_models
+    gs.fit(X_train, y_train)
+    ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1024, in fit
+    self._run_search(evaluate_candidates)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1571, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1001, in evaluate_candidates
+    _warn_or_raise_about_fit_failures(out, self.error_score)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 517, in _warn_or_raise_about_fit_failures
+    raise ValueError(all_fits_failed_message)
+ValueError: 
+All the 12 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+8 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 539, in fit
+    y = _check_y(y, estimator=self)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1408, in _check_y
+    y = column_or_1d(y, warn=True)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1485, in column_or_1d
+    raise ValueError(
+        "y should be a 1d array, got an array of shape {} instead.".format(shape)
+    )
+ValueError: y should be a 1d array, got an array of shape (533, 5) instead.
+
+--------------------------------------------------------------------------------
+4 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 539, in fit
+    y = _check_y(y, estimator=self)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1408, in _check_y
+    y = column_or_1d(y, warn=True)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1485, in column_or_1d
+    raise ValueError(
+        "y should be a 1d array, got an array of shape {} instead.".format(shape)
+    )
+ValueError: y should be a 1d array, got an array of shape (534, 5) instead.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py", line 128, in initiate_model_trainer
+    model_report: dict = evaluate_models(
+                         ~~~~~~~~~~~~~~~^
+        X_train=X_train,
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        params=params # Correctly passing as 'params'
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 70, in evaluate_models
+    raise CustomException(e, sys)
+src.exception.CustomException: Error in C:\Users\yedug\Desktop\ML_Project\src\utils.py , line 41 : 
+All the 12 fits failed.
+It is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+8 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 539, in fit
+    y = _check_y(y, estimator=self)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1408, in _check_y
+    y = column_or_1d(y, warn=True)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1485, in column_or_1d
+    raise ValueError(
+        "y should be a 1d array, got an array of shape {} instead.".format(shape)
+    )
+ValueError: y should be a 1d array, got an array of shape (533, 5) instead.
+
+--------------------------------------------------------------------------------
+4 fits failed with the following error:
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 539, in fit
+    y = _check_y(y, estimator=self)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1408, in _check_y
+    y = column_or_1d(y, warn=True)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 1485, in column_or_1d
+    raise ValueError(
+        "y should be a 1d array, got an array of shape {} instead.".format(shape)
+    )
+ValueError: y should be a 1d array, got an array of shape (534, 5) instead.
+
+2025-08-28 14:53:37,445 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 14:53:37,445 INFO - model_trainer - Starting model training process.
+2025-08-28 14:53:37,445 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 14:53:37,455 INFO - model_trainer - Loaded train_df with shape (800, 22) and test_df with shape (200, 22)
+2025-08-28 14:53:37,455 INFO - model_trainer - Columns in train_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:53:37,455 INFO - model_trainer - Columns in test_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:53:37,460 INFO - model_trainer - Missing values filled using ffill.
+2025-08-28 14:53:37,467 INFO - model_trainer - Categorical features encoded.
+2025-08-28 14:53:37,469 INFO - model_trainer - Data split. X_train shape: (800, 17), y_train shape: (800, 5)
+2025-08-28 14:53:37,470 INFO - model_trainer - X_test shape: (200, 17), y_test shape: (200, 5)
+2025-08-28 14:53:37,470 INFO - model_trainer - Evaluating models with GridSearchCV...
+2025-08-28 14:53:37,470 INFO - utils - Starting model evaluation in utils.py...
+2025-08-28 14:53:37,470 INFO - utils - Evaluating model: RandomForest
+2025-08-28 14:53:37,471 INFO - utils - Applying GridSearchCV for RandomForest with params: {'estimator__n_estimators': [50, 100], 'estimator__max_depth': [None, 10]}
+2025-08-28 14:53:42,039 ERROR - utils - Error during model evaluation: Invalid parameter 'estimator' for estimator RandomForestClassifier(random_state=42). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\externals\loky\process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\externals\loky\process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+            ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 854, in _fit_and_score
+    estimator = estimator.set_params(**clone(parameters, safe=False))
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 283, in set_params
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Invalid parameter 'estimator' for estimator RandomForestClassifier(random_state=42). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 41, in evaluate_models
+    gs.fit(X_train, y_train)
+    ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1024, in fit
+    self._run_search(evaluate_candidates)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1571, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 970, in evaluate_candidates
+    out = parallel(
+        delayed(_fit_and_score)(
+    ...<13 lines>...
+        )
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 745, in get_result
+    return self._return_or_raise()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 763, in _return_or_raise
+    raise self._result
+ValueError: Invalid parameter 'estimator' for estimator RandomForestClassifier(random_state=42). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+2025-08-28 14:53:42,050 ERROR - model_trainer - Error in initiate_model_trainer function: Error in C:\Users\yedug\Desktop\ML_Project\src\utils.py , line 41 : Invalid parameter 'estimator' for estimator RandomForestClassifier(random_state=42). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\externals\loky\process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\externals\loky\process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+            ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 854, in _fit_and_score
+    estimator = estimator.set_params(**clone(parameters, safe=False))
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 283, in set_params
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Invalid parameter 'estimator' for estimator RandomForestClassifier(random_state=42). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 41, in evaluate_models
+    gs.fit(X_train, y_train)
+    ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1024, in fit
+    self._run_search(evaluate_candidates)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1571, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 970, in evaluate_candidates
+    out = parallel(
+        delayed(_fit_and_score)(
+    ...<13 lines>...
+        )
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 745, in get_result
+    return self._return_or_raise()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 763, in _return_or_raise
+    raise self._result
+ValueError: Invalid parameter 'estimator' for estimator RandomForestClassifier(random_state=42). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py", line 123, in initiate_model_trainer
+    model_report: dict = evaluate_models(
+                         ~~~~~~~~~~~~~~~^
+        X_train=X_train,
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        params=params # Correctly passing as 'params'
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 70, in evaluate_models
+    raise CustomException(e, sys)
+src.exception.CustomException: Error in C:\Users\yedug\Desktop\ML_Project\src\utils.py , line 41 : Invalid parameter 'estimator' for estimator RandomForestClassifier(random_state=42). Valid parameters are: ['bootstrap', 'ccp_alpha', 'class_weight', 'criterion', 'max_depth', 'max_features', 'max_leaf_nodes', 'max_samples', 'min_impurity_decrease', 'min_samples_leaf', 'min_samples_split', 'min_weight_fraction_leaf', 'monotonic_cst', 'n_estimators', 'n_jobs', 'oob_score', 'random_state', 'verbose', 'warm_start'].
+2025-08-28 14:59:07,037 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 14:59:07,037 INFO - model_trainer - Starting model training process.
+2025-08-28 14:59:07,037 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 14:59:07,043 INFO - model_trainer - Loaded train_df with shape (800, 22) and test_df with shape (200, 22)
+2025-08-28 14:59:07,043 INFO - model_trainer - Columns in train_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:59:07,044 INFO - model_trainer - Columns in test_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 14:59:07,047 INFO - model_trainer - Missing values filled using ffill.
+2025-08-28 14:59:07,055 INFO - model_trainer - Categorical features encoded.
+2025-08-28 14:59:07,058 INFO - model_trainer - Data split. X_train shape: (800, 17), y_train shape: (800, 5)
+2025-08-28 14:59:07,058 INFO - model_trainer - X_test shape: (200, 17), y_test shape: (200, 5)
+2025-08-28 14:59:07,059 INFO - model_trainer - Evaluating models with GridSearchCV...
+2025-08-28 14:59:07,059 INFO - utils - Starting model evaluation in utils.py...
+2025-08-28 14:59:07,059 INFO - utils - Evaluating model: RandomForest
+2025-08-28 14:59:07,059 INFO - utils - Applying GridSearchCV for RandomForest with params: {'estimator__n_estimators': [50, 100], 'estimator__max_depth': [None, 10]}
+2025-08-28 14:59:13,951 INFO - utils - Best parameters for RandomForest: {'estimator__max_depth': 10, 'estimator__n_estimators': 50}
+2025-08-28 14:59:14,004 INFO - utils - Model RandomForest - Train F1-score: 0.9995, Test F1-score: 0.5020
+2025-08-28 14:59:14,004 INFO - utils - Evaluating model: HistGradientBoosting
+2025-08-28 14:59:14,004 INFO - utils - Applying GridSearchCV for HistGradientBoosting with params: {'estimator__max_iter': [100, 200], 'estimator__max_depth': [None, 10]}
+2025-08-28 14:59:17,310 INFO - utils - Best parameters for HistGradientBoosting: {'estimator__max_depth': None, 'estimator__max_iter': 100}
+2025-08-28 14:59:17,357 INFO - utils - Model HistGradientBoosting - Train F1-score: 1.0000, Test F1-score: 0.5015
+2025-08-28 14:59:17,358 INFO - utils - Evaluating model: DecisionTree
+2025-08-28 14:59:17,358 INFO - utils - Applying GridSearchCV for DecisionTree with params: {'estimator__max_depth': [5, 10], 'estimator__min_samples_leaf': [1, 5]}
+2025-08-28 14:59:17,499 INFO - utils - Best parameters for DecisionTree: {'estimator__max_depth': 10, 'estimator__min_samples_leaf': 5}
+2025-08-28 14:59:17,510 INFO - utils - Model DecisionTree - Train F1-score: 0.7989, Test F1-score: 0.5021
+2025-08-28 14:59:17,510 INFO - utils - Evaluating model: GradientBoosting
+2025-08-28 14:59:17,511 INFO - utils - Applying GridSearchCV for GradientBoosting with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 14:59:19,579 INFO - utils - Best parameters for GradientBoosting: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 100}
+2025-08-28 14:59:19,599 INFO - utils - Model GradientBoosting - Train F1-score: 0.7720, Test F1-score: 0.4898
+2025-08-28 14:59:19,599 INFO - utils - Evaluating model: AdaBoost
+2025-08-28 14:59:19,600 INFO - utils - Applying GridSearchCV for AdaBoost with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 14:59:21,470 INFO - utils - Best parameters for AdaBoost: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 50}
+2025-08-28 14:59:21,531 INFO - utils - Model AdaBoost - Train F1-score: 0.3460, Test F1-score: 0.3191
+2025-08-28 14:59:21,531 INFO - utils - Evaluating model: LogisticRegression
+2025-08-28 14:59:21,553 INFO - utils - No specific hyperparameters for LogisticRegression, using default MultiOutputClassifier.
+2025-08-28 14:59:21,567 INFO - utils - Model LogisticRegression - Train F1-score: 0.5627, Test F1-score: 0.5203
+2025-08-28 14:59:21,568 INFO - utils - Model evaluation completed.
+2025-08-28 14:59:21,568 INFO - model_trainer - Model evaluation report: {'RandomForest': 0.5019996931453432, 'HistGradientBoosting': 0.5014655074582983, 'DecisionTree': 0.5021124299770786, 'GradientBoosting': 0.4897592551982746, 'AdaBoost': 0.31912518308100957, 'LogisticRegression': 0.5203153210425937}
+2025-08-28 14:59:21,569 ERROR - model_trainer - Error in initiate_model_trainer function: CustomException.__init__() missing 1 required positional argument: 'error_detail'
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py", line 143, in initiate_model_trainer
+    raise CustomException(f"No best model found with F1-score >= 0.6. Best score: {best_model_score}")
+          ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CustomException.__init__() missing 1 required positional argument: 'error_detail'
+2025-08-28 15:01:02,147 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 15:01:02,147 INFO - model_trainer - Starting model training process.
+2025-08-28 15:01:02,148 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 15:01:02,153 INFO - model_trainer - Loaded train_df with shape (800, 22) and test_df with shape (200, 22)
+2025-08-28 15:01:02,153 INFO - model_trainer - Columns in train_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 15:01:02,154 INFO - model_trainer - Columns in test_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 15:01:02,159 INFO - model_trainer - Missing values filled using ffill.
+2025-08-28 15:01:02,167 INFO - model_trainer - Categorical features encoded.
+2025-08-28 15:01:02,170 INFO - model_trainer - Data split. X_train shape: (800, 17), y_train shape: (800, 5)
+2025-08-28 15:01:02,170 INFO - model_trainer - X_test shape: (200, 17), y_test shape: (200, 5)
+2025-08-28 15:01:02,171 INFO - model_trainer - Evaluating models with GridSearchCV...
+2025-08-28 15:01:02,171 INFO - utils - Starting model evaluation in utils.py...
+2025-08-28 15:01:02,171 INFO - utils - Evaluating model: RandomForest
+2025-08-28 15:01:02,171 INFO - utils - Applying GridSearchCV for RandomForest with params: {'estimator__n_estimators': [50, 100], 'estimator__max_depth': [None, 10]}
+2025-08-28 15:01:08,328 INFO - utils - Best parameters for RandomForest: {'estimator__max_depth': 10, 'estimator__n_estimators': 50}
+2025-08-28 15:01:08,376 INFO - utils - Model RandomForest - Train F1-score: 0.9995, Test F1-score: 0.5020
+2025-08-28 15:01:08,376 INFO - utils - Evaluating model: HistGradientBoosting
+2025-08-28 15:01:08,377 INFO - utils - Applying GridSearchCV for HistGradientBoosting with params: {'estimator__max_iter': [100, 200], 'estimator__max_depth': [None, 10]}
+2025-08-28 15:01:11,485 INFO - utils - Best parameters for HistGradientBoosting: {'estimator__max_depth': None, 'estimator__max_iter': 100}
+2025-08-28 15:01:11,534 INFO - utils - Model HistGradientBoosting - Train F1-score: 1.0000, Test F1-score: 0.5015
+2025-08-28 15:01:11,535 INFO - utils - Evaluating model: DecisionTree
+2025-08-28 15:01:11,535 INFO - utils - Applying GridSearchCV for DecisionTree with params: {'estimator__max_depth': [5, 10], 'estimator__min_samples_leaf': [1, 5]}
+2025-08-28 15:01:11,667 INFO - utils - Best parameters for DecisionTree: {'estimator__max_depth': 10, 'estimator__min_samples_leaf': 5}
+2025-08-28 15:01:11,681 INFO - utils - Model DecisionTree - Train F1-score: 0.7989, Test F1-score: 0.5021
+2025-08-28 15:01:11,681 INFO - utils - Evaluating model: GradientBoosting
+2025-08-28 15:01:11,681 INFO - utils - Applying GridSearchCV for GradientBoosting with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 15:01:13,592 INFO - utils - Best parameters for GradientBoosting: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 100}
+2025-08-28 15:01:13,614 INFO - utils - Model GradientBoosting - Train F1-score: 0.7720, Test F1-score: 0.4898
+2025-08-28 15:01:13,614 INFO - utils - Evaluating model: AdaBoost
+2025-08-28 15:01:13,614 INFO - utils - Applying GridSearchCV for AdaBoost with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 15:01:15,316 INFO - utils - Best parameters for AdaBoost: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 50}
+2025-08-28 15:01:15,389 INFO - utils - Model AdaBoost - Train F1-score: 0.3460, Test F1-score: 0.3191
+2025-08-28 15:01:15,389 INFO - utils - Evaluating model: LogisticRegression
+2025-08-28 15:01:15,408 INFO - utils - No specific hyperparameters for LogisticRegression, using default MultiOutputClassifier.
+2025-08-28 15:01:15,422 INFO - utils - Model LogisticRegression - Train F1-score: 0.5627, Test F1-score: 0.5203
+2025-08-28 15:01:15,422 INFO - utils - Model evaluation completed.
+2025-08-28 15:01:15,423 INFO - model_trainer - Model evaluation report: {'RandomForest': 0.5019996931453432, 'HistGradientBoosting': 0.5014655074582983, 'DecisionTree': 0.5021124299770786, 'GradientBoosting': 0.4897592551982746, 'AdaBoost': 0.31912518308100957, 'LogisticRegression': 0.5203153210425937}
+2025-08-28 15:01:15,423 ERROR - model_trainer - Error in initiate_model_trainer function: 'NoneType' object has no attribute 'tb_frame'
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py", line 144, in initiate_model_trainer
+    raise CustomException(f"No best model found with F1-score >= 0.6. Best score: {best_model_score}", sys)
+          ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\Desktop\ML_Project\src\exception.py", line 11, in __init__
+    self.error_message = self.get_detailed_error_message(error_message, error_detail)
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\Desktop\ML_Project\src\exception.py", line 21, in get_detailed_error_message
+    file_name = exc_tb.tb_frame.f_code.co_filename
+                ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tb_frame'
+2025-08-28 15:03:30,450 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 15:03:30,450 INFO - model_trainer - Starting model training process.
+2025-08-28 15:03:30,450 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 15:03:30,456 INFO - model_trainer - Loaded train_df with shape (800, 22) and test_df with shape (200, 22)
+2025-08-28 15:03:30,457 INFO - model_trainer - Columns in train_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 15:03:30,457 INFO - model_trainer - Columns in test_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 15:03:30,461 INFO - model_trainer - Missing values filled using ffill.
+2025-08-28 15:03:30,467 INFO - model_trainer - Categorical features encoded.
+2025-08-28 15:03:30,469 INFO - model_trainer - Data split. X_train shape: (800, 17), y_train shape: (800, 5)
+2025-08-28 15:03:30,470 INFO - model_trainer - X_test shape: (200, 17), y_test shape: (200, 5)
+2025-08-28 15:03:30,470 INFO - model_trainer - Evaluating models with GridSearchCV...
+2025-08-28 15:03:30,470 INFO - utils - Starting model evaluation in utils.py...
+2025-08-28 15:03:30,470 INFO - utils - Evaluating model: RandomForest
+2025-08-28 15:03:30,470 INFO - utils - Applying GridSearchCV for RandomForest with params: {'estimator__n_estimators': [50, 100], 'estimator__max_depth': [None, 10]}
+2025-08-28 15:03:36,918 INFO - utils - Best parameters for RandomForest: {'estimator__max_depth': 10, 'estimator__n_estimators': 50}
+2025-08-28 15:03:36,967 INFO - utils - Model RandomForest - Train F1-score: 0.9995, Test F1-score: 0.5020
+2025-08-28 15:03:36,968 INFO - utils - Evaluating model: HistGradientBoosting
+2025-08-28 15:03:36,968 INFO - utils - Applying GridSearchCV for HistGradientBoosting with params: {'estimator__max_iter': [100, 200], 'estimator__max_depth': [None, 10]}
+2025-08-28 15:03:40,146 INFO - utils - Best parameters for HistGradientBoosting: {'estimator__max_depth': None, 'estimator__max_iter': 100}
+2025-08-28 15:03:40,195 INFO - utils - Model HistGradientBoosting - Train F1-score: 1.0000, Test F1-score: 0.5015
+2025-08-28 15:03:40,195 INFO - utils - Evaluating model: DecisionTree
+2025-08-28 15:03:40,195 INFO - utils - Applying GridSearchCV for DecisionTree with params: {'estimator__max_depth': [5, 10], 'estimator__min_samples_leaf': [1, 5]}
+2025-08-28 15:03:40,329 INFO - utils - Best parameters for DecisionTree: {'estimator__max_depth': 10, 'estimator__min_samples_leaf': 5}
+2025-08-28 15:03:40,340 INFO - utils - Model DecisionTree - Train F1-score: 0.7989, Test F1-score: 0.5021
+2025-08-28 15:03:40,340 INFO - utils - Evaluating model: GradientBoosting
+2025-08-28 15:03:40,341 INFO - utils - Applying GridSearchCV for GradientBoosting with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 15:03:42,305 INFO - utils - Best parameters for GradientBoosting: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 100}
+2025-08-28 15:03:42,328 INFO - utils - Model GradientBoosting - Train F1-score: 0.7720, Test F1-score: 0.4898
+2025-08-28 15:03:42,328 INFO - utils - Evaluating model: AdaBoost
+2025-08-28 15:03:42,328 INFO - utils - Applying GridSearchCV for AdaBoost with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 15:03:44,078 INFO - utils - Best parameters for AdaBoost: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 50}
+2025-08-28 15:03:44,144 INFO - utils - Model AdaBoost - Train F1-score: 0.3460, Test F1-score: 0.3191
+2025-08-28 15:03:44,145 INFO - utils - Evaluating model: LogisticRegression
+2025-08-28 15:03:44,172 INFO - utils - No specific hyperparameters for LogisticRegression, using default MultiOutputClassifier.
+2025-08-28 15:03:44,191 INFO - utils - Model LogisticRegression - Train F1-score: 0.5627, Test F1-score: 0.5203
+2025-08-28 15:03:44,192 INFO - utils - Model evaluation completed.
+2025-08-28 15:03:44,192 INFO - model_trainer - Model evaluation report: {'RandomForest': 0.5019996931453432, 'HistGradientBoosting': 0.5014655074582983, 'DecisionTree': 0.5021124299770786, 'GradientBoosting': 0.4897592551982746, 'AdaBoost': 0.31912518308100957, 'LogisticRegression': 0.5203153210425937}
+2025-08-28 15:03:44,193 ERROR - model_trainer - Error in initiate_model_trainer function: Error: No best model found with F1-score >= 0.6. Best score: 0.5203153210425937
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py", line 144, in initiate_model_trainer
+    raise CustomException(f"No best model found with F1-score >= 0.6. Best score: {best_model_score}", sys)
+src.exception.CustomException: Error: No best model found with F1-score >= 0.6. Best score: 0.5203153210425937
+2025-08-28 15:18:30,338 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 15:18:30,339 INFO - model_trainer - Starting model training process.
+2025-08-28 15:18:30,339 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 15:18:30,349 INFO - model_trainer - Loaded train_df with shape (800, 22) and test_df with shape (200, 22)
+2025-08-28 15:18:30,349 INFO - model_trainer - Columns in train_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 15:18:30,350 INFO - model_trainer - Columns in test_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 15:18:30,357 INFO - model_trainer - Missing values filled using ffill.
+2025-08-28 15:18:30,370 INFO - model_trainer - Categorical features encoded.
+2025-08-28 15:18:30,376 INFO - model_trainer - Data split. X_train shape: (800, 17), y_train shape: (800, 5)
+2025-08-28 15:18:30,376 INFO - model_trainer - X_test shape: (200, 17), y_test shape: (200, 5)
+2025-08-28 15:18:30,377 INFO - model_trainer - Evaluating models with GridSearchCV...
+2025-08-28 15:18:30,377 INFO - utils - Starting model evaluation in utils.py...
+2025-08-28 15:18:30,377 INFO - utils - Evaluating model: RandomForest
+2025-08-28 15:18:30,377 INFO - utils - Applying GridSearchCV for RandomForest with params: {'estimator__n_estimators': [50, 100], 'estimator__max_depth': [None, 10]}
+2025-08-28 15:18:36,925 INFO - utils - Best parameters for RandomForest: {'estimator__max_depth': 10, 'estimator__n_estimators': 50}
+2025-08-28 15:18:36,991 INFO - utils - Model RandomForest - Train F1-score: 0.9995, Test F1-score: 0.5020
+2025-08-28 15:18:36,992 INFO - utils - Evaluating model: HistGradientBoosting
+2025-08-28 15:18:36,992 INFO - utils - Applying GridSearchCV for HistGradientBoosting with params: {'estimator__max_iter': [100, 200], 'estimator__max_depth': [None, 10]}
+2025-08-28 15:18:40,091 INFO - utils - Best parameters for HistGradientBoosting: {'estimator__max_depth': None, 'estimator__max_iter': 100}
+2025-08-28 15:18:40,150 INFO - utils - Model HistGradientBoosting - Train F1-score: 1.0000, Test F1-score: 0.5015
+2025-08-28 15:18:40,150 INFO - utils - Evaluating model: DecisionTree
+2025-08-28 15:18:40,150 INFO - utils - Applying GridSearchCV for DecisionTree with params: {'estimator__max_depth': [5, 10], 'estimator__min_samples_leaf': [1, 5]}
+2025-08-28 15:18:40,274 INFO - utils - Best parameters for DecisionTree: {'estimator__max_depth': 10, 'estimator__min_samples_leaf': 5}
+2025-08-28 15:18:40,285 INFO - utils - Model DecisionTree - Train F1-score: 0.7989, Test F1-score: 0.5021
+2025-08-28 15:18:40,285 INFO - utils - Evaluating model: GradientBoosting
+2025-08-28 15:18:40,285 INFO - utils - Applying GridSearchCV for GradientBoosting with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 15:18:42,241 INFO - utils - Best parameters for GradientBoosting: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 100}
+2025-08-28 15:18:42,266 INFO - utils - Model GradientBoosting - Train F1-score: 0.7720, Test F1-score: 0.4898
+2025-08-28 15:18:42,266 INFO - utils - Evaluating model: AdaBoost
+2025-08-28 15:18:42,266 INFO - utils - Applying GridSearchCV for AdaBoost with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 15:18:43,944 INFO - utils - Best parameters for AdaBoost: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 50}
+2025-08-28 15:18:44,020 INFO - utils - Model AdaBoost - Train F1-score: 0.3460, Test F1-score: 0.3191
+2025-08-28 15:18:44,021 INFO - utils - Evaluating model: LogisticRegression
+2025-08-28 15:18:44,058 INFO - utils - No specific hyperparameters for LogisticRegression, using default MultiOutputClassifier.
+2025-08-28 15:18:44,078 INFO - utils - Model LogisticRegression - Train F1-score: 0.5627, Test F1-score: 0.5203
+2025-08-28 15:18:44,079 INFO - utils - Model evaluation completed.
+2025-08-28 15:18:44,079 INFO - model_trainer - Model evaluation report: {'RandomForest': 0.5019996931453432, 'HistGradientBoosting': 0.5014655074582983, 'DecisionTree': 0.5021124299770786, 'GradientBoosting': 0.4897592551982746, 'AdaBoost': 0.31912518308100957, 'LogisticRegression': 0.5203153210425937}
+2025-08-28 15:18:44,080 INFO - model_trainer - Best found model: LogisticRegression with F1-score: 0.5203153210425937
+2025-08-28 15:18:44,102 INFO - model_trainer - Final MultiOutputClassifier trained with the best base model.
+2025-08-28 15:18:44,109 INFO - utils - Object successfully saved to artifacts\model.pkl
+2025-08-28 15:18:44,109 INFO - model_trainer - Model saved to artifacts\model.pkl
+2025-08-28 15:18:44,115 INFO - model_trainer - Macro F1-score on test set with best model: 0.5203153210425937
+2025-08-28 15:18:44,115 INFO - model_trainer - Model training completed successfully.
+2025-08-28 15:41:40,353 INFO - app - Model loaded successfully.
+2025-08-28 15:41:40,440 INFO - _internal - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.163.245.10:5000
+2025-08-28 15:41:40,441 INFO - _internal - [33mPress CTRL+C to quit[0m
+2025-08-28 15:41:40,467 INFO - _internal -  * Restarting with watchdog (windowsapi)
+2025-08-28 15:41:42,377 INFO - app - Model loaded successfully.
+2025-08-28 15:41:42,386 WARNING - _internal -  * Debugger is active!
+2025-08-28 15:41:42,393 INFO - _internal -  * Debugger PIN: 170-676-688
+2025-08-28 15:48:49,991 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\jinja2\\loaders.py', reloading
+2025-08-28 15:48:50,010 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:48:50] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:48:51,037 INFO - _internal -  * Restarting with watchdog (windowsapi)
+2025-08-28 15:48:53,704 INFO - app - Model loaded successfully.
+2025-08-28 15:48:53,720 WARNING - _internal -  * Debugger is active!
+2025-08-28 15:48:53,728 INFO - _internal -  * Debugger PIN: 170-676-688
+2025-08-28 15:48:53,805 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:48:53] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-08-28 15:48:53,910 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:48:53] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-08-28 15:48:59,068 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:48:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:48:59,097 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:48:59] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-08-28 15:48:59,100 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:48:59] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-28 15:48:59,149 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:48:59] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-28 15:49:01,283 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:49:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:49:01,317 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:49:01] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-28 15:49:01,321 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:49:01] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-28 15:49:01,376 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:49:01] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-28 15:49:02,361 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:49:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:49:02,390 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:49:02] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-28 15:49:02,396 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:49:02] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-28 15:49:02,434 INFO - _internal - 10.163.245.10 - - [28/Aug/2025 15:49:02] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-28 15:49:45,346 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:49:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:49:45,370 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:49:45] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-08-28 15:49:45,372 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:49:45] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-08-28 15:49:45,407 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:49:45] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=44KY5s9962pmYI85kmyf HTTP/1.1" 200 -
+2025-08-28 15:49:45,473 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:49:45] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-08-28 15:53:32,091 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\ensemble\\_forest.py', reloading
+2025-08-28 15:53:32,124 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\base.py', reloading
+2025-08-28 15:53:32,168 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\ensemble\\_base.py', reloading
+2025-08-28 15:53:32,217 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\utils\\_estimator_html_repr.py', reloading
+2025-08-28 15:53:32,263 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\sklearn\\utils\\_metadata_requests.py', reloading
+2025-08-28 15:53:33,286 INFO - _internal -  * Restarting with watchdog (windowsapi)
+2025-08-28 15:53:35,332 INFO - app - Model loaded successfully.
+2025-08-28 15:53:35,341 WARNING - _internal -  * Debugger is active!
+2025-08-28 15:53:35,345 INFO - _internal -  * Debugger PIN: 170-676-688
+2025-08-28 15:53:36,102 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\app.py', reloading
+2025-08-28 15:53:36,104 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\app.py', reloading
+2025-08-28 15:53:36,105 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\app.py', reloading
+2025-08-28 15:53:36,600 INFO - _internal -  * Restarting with watchdog (windowsapi)
+2025-08-28 15:53:38,482 INFO - app - Model loaded successfully.
+2025-08-28 15:53:38,493 WARNING - _internal -  * Debugger is active!
+2025-08-28 15:53:38,496 INFO - _internal -  * Debugger PIN: 170-676-688
+2025-08-28 15:54:06,791 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\app.py', reloading
+2025-08-28 15:54:06,792 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\app.py', reloading
+2025-08-28 15:54:07,902 INFO - _internal -  * Restarting with watchdog (windowsapi)
+2025-08-28 15:54:09,653 INFO - app - Model loaded successfully.
+2025-08-28 15:54:09,661 WARNING - _internal -  * Debugger is active!
+2025-08-28 15:54:09,665 INFO - _internal -  * Debugger PIN: 170-676-688
+2025-08-28 15:54:37,437 DEBUG - app - Attempting to render 'index.html'. Flask root path: C:\Users\yedug\Desktop\ML_Project, Template folder: templates
+2025-08-28 15:54:37,463 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:54:37,542 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:37] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-28 15:54:37,544 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:37] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-28 15:54:37,579 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:37] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=PrDa807v3j1KOKHpQbDZ HTTP/1.1" 200 -
+2025-08-28 15:54:37,604 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:37] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-28 15:54:39,027 DEBUG - app - Attempting to render 'index.html'. Flask root path: C:\Users\yedug\Desktop\ML_Project, Template folder: templates
+2025-08-28 15:54:39,065 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:54:39,095 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:39] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-28 15:54:39,099 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:39] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-28 15:54:39,149 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:39] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=PrDa807v3j1KOKHpQbDZ HTTP/1.1[0m" 304 -
+2025-08-28 15:54:39,181 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:39] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-28 15:54:40,034 DEBUG - app - Attempting to render 'index.html'. Flask root path: C:\Users\yedug\Desktop\ML_Project, Template folder: templates
+2025-08-28 15:54:40,065 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:54:40,094 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:40] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-28 15:54:40,097 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:40] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-28 15:54:40,132 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:40] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=PrDa807v3j1KOKHpQbDZ HTTP/1.1[0m" 304 -
+2025-08-28 15:54:40,161 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:40] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-28 15:54:41,079 DEBUG - app - Attempting to render 'index.html'. Flask root path: C:\Users\yedug\Desktop\ML_Project, Template folder: templates
+2025-08-28 15:54:41,096 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:54:41,133 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:41] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-28 15:54:41,135 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:41] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-28 15:54:41,167 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:41] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=PrDa807v3j1KOKHpQbDZ HTTP/1.1[0m" 304 -
+2025-08-28 15:54:41,187 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:41] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-28 15:54:42,780 DEBUG - app - Attempting to render 'index.html'. Flask root path: C:\Users\yedug\Desktop\ML_Project, Template folder: templates
+2025-08-28 15:54:42,807 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:54:42,845 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:42] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-28 15:54:42,851 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:42] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-28 15:54:42,887 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:42] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=PrDa807v3j1KOKHpQbDZ HTTP/1.1[0m" 304 -
+2025-08-28 15:54:42,917 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:54:42] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-28 15:56:22,533 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\app.py', reloading
+2025-08-28 15:56:22,537 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\app.py', reloading
+2025-08-28 15:56:23,672 INFO - _internal -  * Restarting with watchdog (windowsapi)
+2025-08-28 15:56:25,718 DEBUG - app - Calculated TEMPLATE_DIR: C:\Users\yedug\Desktop\ML_Project\templates
+2025-08-28 15:56:25,803 INFO - app - Model loaded successfully.
+2025-08-28 15:56:25,812 WARNING - _internal -  * Debugger is active!
+2025-08-28 15:56:25,815 INFO - _internal -  * Debugger PIN: 170-676-688
+2025-08-28 15:56:57,161 DEBUG - app - Attempting to render 'index.html'. Flask root path: C:\Users\yedug\Desktop\ML_Project, Template folder: C:\Users\yedug\Desktop\ML_Project\templates
+2025-08-28 15:56:57,184 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:56:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:56:57,431 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:56:57] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-28 15:56:57,440 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:56:57] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-28 15:56:57,481 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:56:57] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=d48yHqGj31mFg8fCHraP HTTP/1.1" 200 -
+2025-08-28 15:56:57,497 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:56:57] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-28 15:56:58,740 DEBUG - app - Attempting to render 'index.html'. Flask root path: C:\Users\yedug\Desktop\ML_Project, Template folder: C:\Users\yedug\Desktop\ML_Project\templates
+2025-08-28 15:56:58,769 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:56:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-28 15:56:58,799 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:56:58] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-28 15:56:58,801 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:56:58] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-08-28 15:56:58,837 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:56:58] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=d48yHqGj31mFg8fCHraP HTTP/1.1[0m" 304 -
+2025-08-28 15:56:58,863 INFO - _internal - 127.0.0.1 - - [28/Aug/2025 15:56:58] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-08-28 16:00:06,835 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\src\\logger.py', reloading
+2025-08-28 16:00:06,835 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\src\\utils.py', reloading
+2025-08-28 16:00:08,007 INFO - _internal -  * Restarting with watchdog (windowsapi)
+2025-08-28 16:00:09,644 DEBUG - app - Calculated TEMPLATE_DIR: C:\Users\yedug\Desktop\ML_Project\templates
+2025-08-28 16:00:09,829 INFO - app - Model loaded successfully.
+2025-08-28 16:00:09,852 WARNING - _internal -  * Debugger is active!
+2025-08-28 16:00:09,860 INFO - _internal -  * Debugger PIN: 170-676-688
+2025-08-28 16:00:09,934 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\runtime\\context.py', reloading
+2025-08-28 16:00:09,959 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\runtime\\state\\__init__.py', reloading
+2025-08-28 16:00:09,974 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\runtime\\state\\query_params_proxy.py', reloading
+2025-08-28 16:00:09,997 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\runtime\\state\\session_state_proxy.py', reloading
+2025-08-28 16:00:10,017 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\logger.py', reloading
+2025-08-28 16:00:10,036 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\lib\\utils.py', reloading
+2025-08-28 16:00:10,059 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\runtime\\metrics_util.py', reloading
+2025-08-28 16:00:10,134 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\config.py', reloading
+2025-08-28 16:00:10,169 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\delta_generator_singletons.py', reloading
+2025-08-28 16:00:10,195 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\runtime\\stats.py', reloading
+2025-08-28 16:00:10,230 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\runtime\\caching\\cached_message_replay.py', reloading
+2025-08-28 16:00:10,252 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\runtime\\caching\\hashing.py', reloading
+2025-08-28 16:00:10,282 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\runtime\\caching\\cache_utils.py', reloading
+2025-08-28 16:00:10,331 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\delta_generator.py', reloading
+2025-08-28 16:00:10,383 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\alert.py', reloading
+2025-08-28 16:00:10,402 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\widgets\\audio_input.py', reloading
+2025-08-28 16:00:10,428 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\balloons.py', reloading
+2025-08-28 16:00:10,469 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\bokeh_chart.py', reloading
+2025-08-28 16:00:10,488 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\widgets\\button.py', reloading
+2025-08-28 16:00:10,519 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\widgets\\button_group.py', reloading
+2025-08-28 16:00:10,549 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\widgets\\camera_input.py', reloading
+2025-08-28 16:00:10,571 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\widgets\\chat.py', reloading
+2025-08-28 16:00:10,596 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\widgets\\checkbox.py', reloading
+2025-08-28 16:00:10,616 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\code.py', reloading
+2025-08-28 16:00:10,618 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\app.py', reloading
+2025-08-28 16:00:10,619 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\app.py', reloading
+2025-08-28 16:00:10,620 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\Desktop\\ML_Project\\app.py', reloading
+2025-08-28 16:00:10,636 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\widgets\\color_picker.py', reloading
+2025-08-28 16:00:10,656 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\empty.py', reloading
+2025-08-28 16:00:10,675 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\exception.py', reloading
+2025-08-28 16:00:10,697 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\widgets\\file_uploader.py', reloading
+2025-08-28 16:00:10,716 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\form.py', reloading
+2025-08-28 16:00:10,730 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\graphviz_chart.py', reloading
+2025-08-28 16:00:10,749 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\heading.py', reloading
+2025-08-28 16:00:10,766 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\doc_string.py', reloading
+2025-08-28 16:00:10,795 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\html.py', reloading
+2025-08-28 16:00:10,818 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\iframe.py', reloading
+2025-08-28 16:00:10,835 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\image.py', reloading
+2025-08-28 16:00:10,857 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\layouts.py', reloading
+2025-08-28 16:00:10,877 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\markdown.py', reloading
+2025-08-28 16:00:10,912 INFO - _internal -  * Detected change in 'C:\\Users\\yedug\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\streamlit\\elements\\map.py', reloading
+2025-08-28 16:00:11,219 INFO - _internal -  * Restarting with watchdog (windowsapi)
+2025-08-28 16:00:14,677 INFO - app - Model loaded successfully.
+2025-08-28 16:00:51,560 INFO - app - Model loaded successfully.
+2025-08-28 16:02:16,230 ERROR - app - Error during Streamlit prediction: 
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\app.py", line 255, in <module>
+    input_df.fillna(method='ffill', axis=1, inplace=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 7313, in fillna
+    return self._pad_or_backfill(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        # error: Argument 1 to "_pad_or_backfill" of "NDFrame" has
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        downcast=downcast,  # type: ignore[arg-type]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\generic.py", line 7082, in _pad_or_backfill
+    raise NotImplementedError()
+NotImplementedError
+2025-08-28 16:04:44,227 INFO - app - Model loaded successfully.
+2025-08-28 16:04:47,529 ERROR - app - Error during Streamlit prediction: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Arthritis
+- Asthma
+- Hypertension
+- KidneyDisease
+- MentalHealthIssue
+- ...
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\app.py", line 263, in <module>
+    predictions_raw = trained_model.predict(input_df)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\multioutput.py", line 306, in predict
+    y = Parallel(n_jobs=self.n_jobs)(
+        delayed(e.predict)(X) for e in self.estimators_
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 374, in predict
+    scores = self.decision_function(X)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 351, in decision_function
+    X = validate_data(self, X, accept_sparse="csr", reset=False)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Arthritis
+- Asthma
+- Hypertension
+- KidneyDisease
+- MentalHealthIssue
+- ...
+
+2025-08-28 16:07:07,713 DEBUG - app - Input DataFrame columns before prediction: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory']
+2025-08-28 16:07:07,714 DEBUG - app - Input DataFrame shape before prediction: (1, 11)
+2025-08-28 16:07:07,715 ERROR - app - Error during Streamlit prediction: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Arthritis
+- Asthma
+- Hypertension
+- KidneyDisease
+- MentalHealthIssue
+- ...
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\app.py", line 282, in <module>
+    predictions_raw = trained_model.predict(input_df_for_prediction) # Use the filtered DataFrame
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\multioutput.py", line 306, in predict
+    y = Parallel(n_jobs=self.n_jobs)(
+        delayed(e.predict)(X) for e in self.estimators_
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 374, in predict
+    scores = self.decision_function(X)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 351, in decision_function
+    X = validate_data(self, X, accept_sparse="csr", reset=False)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Arthritis
+- Asthma
+- Hypertension
+- KidneyDisease
+- MentalHealthIssue
+- ...
+
+2025-08-28 16:08:38,107 INFO - app - Model loaded successfully.
+2025-08-28 16:08:41,937 DEBUG - app - Input DataFrame columns before prediction: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory']
+2025-08-28 16:08:41,938 DEBUG - app - Input DataFrame shape before prediction: (1, 11)
+2025-08-28 16:08:41,939 ERROR - app - Error during Streamlit prediction: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Arthritis
+- Asthma
+- Hypertension
+- KidneyDisease
+- MentalHealthIssue
+- ...
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\app.py", line 276, in <module>
+    predictions_raw = trained_model.predict(input_df_for_prediction) # Use the filtered DataFrame
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\multioutput.py", line 306, in predict
+    y = Parallel(n_jobs=self.n_jobs)(
+        delayed(e.predict)(X) for e in self.estimators_
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 374, in predict
+    scores = self.decision_function(X)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 351, in decision_function
+    X = validate_data(self, X, accept_sparse="csr", reset=False)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Arthritis
+- Asthma
+- Hypertension
+- KidneyDisease
+- MentalHealthIssue
+- ...
+
+2025-08-28 16:20:58,111 INFO - model_trainer - ModelTrainer initialized for Multi-Output Regression.
+2025-08-28 16:20:58,112 INFO - model_trainer - Starting model training process for Multi-Output Regression.
+2025-08-28 16:20:58,112 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 16:20:58,137 INFO - model_trainer - Loaded train_df with shape (800, 22) and test_df with shape (200, 22)
+2025-08-28 16:20:58,137 INFO - model_trainer - Columns in train_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 16:20:58,137 INFO - model_trainer - Columns in test_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 16:20:58,143 INFO - model_trainer - Encoding binary target columns ('Yes'/'No') to numerical values (1/0).
+2025-08-28 16:20:58,162 INFO - model_trainer - Missing values filled using ffill.
+2025-08-28 16:20:58,171 INFO - model_trainer - Categorical features encoded for X_train and X_test.
+2025-08-28 16:20:58,172 INFO - utils - Object successfully saved to artifacts\feature_columns.pkl
+2025-08-28 16:20:58,173 INFO - model_trainer - Feature column names saved to artifacts\feature_columns.pkl
+2025-08-28 16:20:58,173 INFO - model_trainer - Data split. X_train shape: (800, 11), y_train shape: (800, 11)
+2025-08-28 16:20:58,173 INFO - model_trainer - X_test shape: (200, 11), y_test shape: (200, 11)
+2025-08-28 16:20:58,174 INFO - model_trainer - Evaluating models with GridSearchCV...
+2025-08-28 16:20:58,174 INFO - utils - Starting model evaluation in utils.py...
+2025-08-28 16:20:58,174 INFO - utils - Evaluating model: RandomForest
+2025-08-28 16:20:58,174 INFO - utils - Applying GridSearchCV for RandomForest with params: {'n_estimators': [50, 100], 'max_depth': [None, 10]}
+2025-08-28 16:21:03,468 ERROR - utils - Error during model evaluation: Invalid parameter 'max_depth' for estimator MultiOutputClassifier(estimator=RandomForestRegressor(random_state=42)). Valid parameters are: ['estimator', 'n_jobs'].
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\externals\loky\process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\externals\loky\process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+            ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 854, in _fit_and_score
+    estimator = estimator.set_params(**clone(parameters, safe=False))
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 283, in set_params
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Invalid parameter 'max_depth' for estimator MultiOutputClassifier(estimator=RandomForestRegressor(random_state=42)). Valid parameters are: ['estimator', 'n_jobs'].
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 45, in evaluate_models
+    gs.fit(X_train, y_train)
+    ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1024, in fit
+    self._run_search(evaluate_candidates)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1571, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 970, in evaluate_candidates
+    out = parallel(
+        delayed(_fit_and_score)(
+    ...<13 lines>...
+        )
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 745, in get_result
+    return self._return_or_raise()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 763, in _return_or_raise
+    raise self._result
+ValueError: Invalid parameter 'max_depth' for estimator MultiOutputClassifier(estimator=RandomForestRegressor(random_state=42)). Valid parameters are: ['estimator', 'n_jobs'].
+2025-08-28 16:21:03,474 ERROR - model_trainer - Error in initiate_model_trainer function: Error in C:\Users\yedug\Desktop\ML_Project\src\utils.py , line 45 : Invalid parameter 'max_depth' for estimator MultiOutputClassifier(estimator=RandomForestRegressor(random_state=42)). Valid parameters are: ['estimator', 'n_jobs'].
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\externals\loky\process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\externals\loky\process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+            ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_validation.py", line 854, in _fit_and_score
+    estimator = estimator.set_params(**clone(parameters, safe=False))
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 283, in set_params
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Invalid parameter 'max_depth' for estimator MultiOutputClassifier(estimator=RandomForestRegressor(random_state=42)). Valid parameters are: ['estimator', 'n_jobs'].
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 45, in evaluate_models
+    gs.fit(X_train, y_train)
+    ~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1024, in fit
+    self._run_search(evaluate_candidates)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 1571, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\model_selection\_search.py", line 970, in evaluate_candidates
+    out = parallel(
+        delayed(_fit_and_score)(
+    ...<13 lines>...
+        )
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 745, in get_result
+    return self._return_or_raise()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 763, in _return_or_raise
+    raise self._result
+ValueError: Invalid parameter 'max_depth' for estimator MultiOutputClassifier(estimator=RandomForestRegressor(random_state=42)). Valid parameters are: ['estimator', 'n_jobs'].
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Components\model_trainer.py", line 148, in initiate_model_trainer
+    model_report: dict = evaluate_models(
+                         ~~~~~~~~~~~~~~~^
+        X_train=X_train,
+        ^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        params=params
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\yedug\Desktop\ML_Project\src\utils.py", line 72, in evaluate_models
+    raise CustomException(e, sys)
+src.exception.CustomException: Error in C:\Users\yedug\Desktop\ML_Project\src\utils.py , line 45 : Invalid parameter 'max_depth' for estimator MultiOutputClassifier(estimator=RandomForestRegressor(random_state=42)). Valid parameters are: ['estimator', 'n_jobs'].
+2025-08-28 16:21:34,126 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 16:21:34,126 INFO - model_trainer - Starting model training process.
+2025-08-28 16:21:34,127 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 16:21:34,134 INFO - model_trainer - Loaded train_df with shape (800, 22) and test_df with shape (200, 22)
+2025-08-28 16:21:34,134 INFO - model_trainer - Columns in train_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 16:21:34,134 INFO - model_trainer - Columns in test_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 16:21:34,138 INFO - model_trainer - Missing values filled using ffill.
+2025-08-28 16:21:34,146 INFO - model_trainer - Categorical features encoded.
+2025-08-28 16:21:34,149 INFO - model_trainer - Data split. X_train shape: (800, 17), y_train shape: (800, 5)
+2025-08-28 16:21:34,149 INFO - model_trainer - X_test shape: (200, 17), y_test shape: (200, 5)
+2025-08-28 16:21:34,150 INFO - model_trainer - Evaluating models with GridSearchCV...
+2025-08-28 16:21:34,150 INFO - utils - Starting model evaluation in utils.py...
+2025-08-28 16:21:34,150 INFO - utils - Evaluating model: RandomForest
+2025-08-28 16:21:34,150 INFO - utils - Applying GridSearchCV for RandomForest with params: {'estimator__n_estimators': [50, 100], 'estimator__max_depth': [None, 10]}
+2025-08-28 16:21:41,024 INFO - utils - Best parameters for RandomForest: {'estimator__max_depth': 10, 'estimator__n_estimators': 50}
+2025-08-28 16:21:41,087 INFO - utils - Model RandomForest - Train F1-score: 0.9995, Test F1-score: 0.5020
+2025-08-28 16:21:41,087 INFO - utils - Evaluating model: HistGradientBoosting
+2025-08-28 16:21:41,088 INFO - utils - Applying GridSearchCV for HistGradientBoosting with params: {'estimator__max_iter': [100, 200], 'estimator__max_depth': [None, 10]}
+2025-08-28 16:21:44,380 INFO - utils - Best parameters for HistGradientBoosting: {'estimator__max_depth': None, 'estimator__max_iter': 100}
+2025-08-28 16:21:44,435 INFO - utils - Model HistGradientBoosting - Train F1-score: 1.0000, Test F1-score: 0.5015
+2025-08-28 16:21:44,436 INFO - utils - Evaluating model: DecisionTree
+2025-08-28 16:21:44,436 INFO - utils - Applying GridSearchCV for DecisionTree with params: {'estimator__max_depth': [5, 10], 'estimator__min_samples_leaf': [1, 5]}
+2025-08-28 16:21:44,569 INFO - utils - Best parameters for DecisionTree: {'estimator__max_depth': 10, 'estimator__min_samples_leaf': 5}
+2025-08-28 16:21:44,580 INFO - utils - Model DecisionTree - Train F1-score: 0.7989, Test F1-score: 0.5021
+2025-08-28 16:21:44,580 INFO - utils - Evaluating model: GradientBoosting
+2025-08-28 16:21:44,581 INFO - utils - Applying GridSearchCV for GradientBoosting with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 16:21:46,536 INFO - utils - Best parameters for GradientBoosting: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 100}
+2025-08-28 16:21:46,553 INFO - utils - Model GradientBoosting - Train F1-score: 0.7720, Test F1-score: 0.4898
+2025-08-28 16:21:46,553 INFO - utils - Evaluating model: AdaBoost
+2025-08-28 16:21:46,553 INFO - utils - Applying GridSearchCV for AdaBoost with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 16:21:48,283 INFO - utils - Best parameters for AdaBoost: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 50}
+2025-08-28 16:21:48,347 INFO - utils - Model AdaBoost - Train F1-score: 0.3460, Test F1-score: 0.3191
+2025-08-28 16:21:48,347 INFO - utils - Evaluating model: LogisticRegression
+2025-08-28 16:21:48,389 INFO - utils - No specific hyperparameters for LogisticRegression, using default MultiOutputClassifier.
+2025-08-28 16:21:48,406 INFO - utils - Model LogisticRegression - Train F1-score: 0.5627, Test F1-score: 0.5203
+2025-08-28 16:21:48,406 INFO - utils - Model evaluation completed.
+2025-08-28 16:21:48,407 INFO - model_trainer - Model evaluation report: {'RandomForest': 0.5019996931453432, 'HistGradientBoosting': 0.5014655074582983, 'DecisionTree': 0.5021124299770786, 'GradientBoosting': 0.4897592551982746, 'AdaBoost': 0.31912518308100957, 'LogisticRegression': 0.5203153210425937}
+2025-08-28 16:21:48,407 INFO - model_trainer - Best found model: LogisticRegression with F1-score: 0.5203153210425937
+2025-08-28 16:21:48,426 INFO - model_trainer - Final MultiOutputClassifier trained with the best base model.
+2025-08-28 16:21:48,431 INFO - utils - Object successfully saved to artifacts\model.pkl
+2025-08-28 16:21:48,431 INFO - model_trainer - Model saved to artifacts\model.pkl
+2025-08-28 16:21:48,439 INFO - model_trainer - Macro F1-score on test set with best model: 0.5203153210425937
+2025-08-28 16:21:48,440 INFO - model_trainer - Model training completed successfully.
+2025-08-28 16:22:20,110 INFO - model_trainer - ModelTrainer initialized.
+2025-08-28 16:22:20,110 INFO - model_trainer - Starting model training process.
+2025-08-28 16:22:20,110 INFO - model_trainer - Train path: artifacts/train.csv, Test path: artifacts/test.csv
+2025-08-28 16:22:20,117 INFO - model_trainer - Loaded train_df with shape (800, 22) and test_df with shape (200, 22)
+2025-08-28 16:22:20,117 INFO - model_trainer - Columns in train_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 16:22:20,117 INFO - model_trainer - Columns in test_df BEFORE processing: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 16:22:20,122 INFO - model_trainer - Missing values filled using ffill.
+2025-08-28 16:22:20,132 INFO - model_trainer - Categorical features encoded.
+2025-08-28 16:22:20,134 INFO - model_trainer - Data split. X_train shape: (800, 17), y_train shape: (800, 5)
+2025-08-28 16:22:20,134 INFO - model_trainer - X_test shape: (200, 17), y_test shape: (200, 5)
+2025-08-28 16:22:20,134 INFO - model_trainer - Evaluating models with GridSearchCV...
+2025-08-28 16:22:20,134 INFO - utils - Starting model evaluation in utils.py...
+2025-08-28 16:22:20,134 INFO - utils - Evaluating model: RandomForest
+2025-08-28 16:22:20,135 INFO - utils - Applying GridSearchCV for RandomForest with params: {'estimator__n_estimators': [50, 100], 'estimator__max_depth': [None, 10]}
+2025-08-28 16:22:26,397 INFO - utils - Best parameters for RandomForest: {'estimator__max_depth': 10, 'estimator__n_estimators': 50}
+2025-08-28 16:22:26,463 INFO - utils - Model RandomForest - Train F1-score: 0.9995, Test F1-score: 0.5020
+2025-08-28 16:22:26,464 INFO - utils - Evaluating model: HistGradientBoosting
+2025-08-28 16:22:26,464 INFO - utils - Applying GridSearchCV for HistGradientBoosting with params: {'estimator__max_iter': [100, 200], 'estimator__max_depth': [None, 10]}
+2025-08-28 16:22:29,684 INFO - utils - Best parameters for HistGradientBoosting: {'estimator__max_depth': None, 'estimator__max_iter': 100}
+2025-08-28 16:22:29,737 INFO - utils - Model HistGradientBoosting - Train F1-score: 1.0000, Test F1-score: 0.5015
+2025-08-28 16:22:29,737 INFO - utils - Evaluating model: DecisionTree
+2025-08-28 16:22:29,738 INFO - utils - Applying GridSearchCV for DecisionTree with params: {'estimator__max_depth': [5, 10], 'estimator__min_samples_leaf': [1, 5]}
+2025-08-28 16:22:29,865 INFO - utils - Best parameters for DecisionTree: {'estimator__max_depth': 10, 'estimator__min_samples_leaf': 5}
+2025-08-28 16:22:29,875 INFO - utils - Model DecisionTree - Train F1-score: 0.7989, Test F1-score: 0.5021
+2025-08-28 16:22:29,876 INFO - utils - Evaluating model: GradientBoosting
+2025-08-28 16:22:29,876 INFO - utils - Applying GridSearchCV for GradientBoosting with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 16:22:31,809 INFO - utils - Best parameters for GradientBoosting: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 100}
+2025-08-28 16:22:31,832 INFO - utils - Model GradientBoosting - Train F1-score: 0.7720, Test F1-score: 0.4898
+2025-08-28 16:22:31,833 INFO - utils - Evaluating model: AdaBoost
+2025-08-28 16:22:31,833 INFO - utils - Applying GridSearchCV for AdaBoost with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 16:22:33,539 INFO - utils - Best parameters for AdaBoost: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 50}
+2025-08-28 16:22:33,606 INFO - utils - Model AdaBoost - Train F1-score: 0.3460, Test F1-score: 0.3191
+2025-08-28 16:22:33,607 INFO - utils - Evaluating model: LogisticRegression
+2025-08-28 16:22:33,624 INFO - utils - No specific hyperparameters for LogisticRegression, using default MultiOutputClassifier.
+2025-08-28 16:22:33,636 INFO - utils - Model LogisticRegression - Train F1-score: 0.5627, Test F1-score: 0.5203
+2025-08-28 16:22:33,637 INFO - utils - Model evaluation completed.
+2025-08-28 16:22:33,637 INFO - model_trainer - Model evaluation report: {'RandomForest': 0.5019996931453432, 'HistGradientBoosting': 0.5014655074582983, 'DecisionTree': 0.5021124299770786, 'GradientBoosting': 0.4897592551982746, 'AdaBoost': 0.31912518308100957, 'LogisticRegression': 0.5203153210425937}
+2025-08-28 16:22:33,637 INFO - model_trainer - Best found model: LogisticRegression with F1-score: 0.5203153210425937
+2025-08-28 16:22:33,657 INFO - model_trainer - Final MultiOutputClassifier trained with the best base model.
+2025-08-28 16:22:33,661 INFO - utils - Object successfully saved to artifacts\model.pkl
+2025-08-28 16:22:33,662 INFO - model_trainer - Model saved to artifacts\model.pkl
+2025-08-28 16:22:33,668 INFO - model_trainer - Macro F1-score on test set with best model: 0.5203153210425937
+2025-08-28 16:22:33,668 INFO - model_trainer - Model training completed successfully.
+2025-08-28 16:23:03,700 DEBUG - app - Input DataFrame columns before prediction: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory']
+2025-08-28 16:23:03,703 DEBUG - app - Input DataFrame shape before prediction: (1, 11)
+2025-08-28 16:23:03,707 ERROR - app - Error during Streamlit prediction: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Arthritis
+- Asthma
+- Hypertension
+- KidneyDisease
+- MentalHealthIssue
+- ...
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\app.py", line 276, in <module>
+    predictions_raw = trained_model.predict(input_df_for_prediction) # Use the filtered DataFrame
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\multioutput.py", line 306, in predict
+    y = Parallel(n_jobs=self.n_jobs)(
+        delayed(e.predict)(X) for e in self.estimators_
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 374, in predict
+    scores = self.decision_function(X)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 351, in decision_function
+    X = validate_data(self, X, accept_sparse="csr", reset=False)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Arthritis
+- Asthma
+- Hypertension
+- KidneyDisease
+- MentalHealthIssue
+- ...
+
+2025-08-28 16:26:10,284 INFO - app - Model loaded successfully.
+2025-08-28 16:26:10,285 INFO - app - Feature columns loaded successfully.
+2025-08-28 16:26:12,995 DEBUG - app - Final Input DataFrame columns before prediction: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory']
+2025-08-28 16:26:12,996 DEBUG - app - Final Input DataFrame shape before prediction: (1, 11)
+2025-08-28 16:26:12,997 ERROR - app - Error during Streamlit prediction: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Arthritis
+- Asthma
+- Hypertension
+- KidneyDisease
+- MentalHealthIssue
+- ...
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\app.py", line 287, in <module>
+    predictions_raw = trained_model.predict(final_input_df) # Use the correctly structured DataFrame
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\multioutput.py", line 306, in predict
+    y = Parallel(n_jobs=self.n_jobs)(
+        delayed(e.predict)(X) for e in self.estimators_
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 374, in predict
+    scores = self.decision_function(X)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 351, in decision_function
+    X = validate_data(self, X, accept_sparse="csr", reset=False)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names seen at fit time, yet now missing:
+- Arthritis
+- Asthma
+- Hypertension
+- KidneyDisease
+- MentalHealthIssue
+- ...
+
+2025-08-28 16:28:48,171 INFO - app - PredictPipeline loaded successfully.
+2025-08-28 16:28:51,085 ERROR - app - Error during Streamlit prediction: X has 22 features, but LogisticRegression is expecting 17 features as input.
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\app.py", line 232, in <module>
+    predictions_dict, recommendations = predict_pipeline_instance.predict(input_features)
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\Desktop\ML_Project\src\Pipeline\predict_pipeline.py", line 34, in predict
+    preds = self.model.predict(transformed)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\multioutput.py", line 306, in predict
+    y = Parallel(n_jobs=self.n_jobs)(
+        delayed(e.predict)(X) for e in self.estimators_
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 374, in predict
+    scores = self.decision_function(X)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 351, in decision_function
+    X = validate_data(self, X, accept_sparse="csr", reset=False)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2965, in validate_data
+    _check_n_features(_estimator, X, reset=reset)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2829, in _check_n_features
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: X has 22 features, but LogisticRegression is expecting 17 features as input.
+2025-08-28 16:34:36,170 ERROR - app - Error during Streamlit prediction: X has 22 features, but LogisticRegression is expecting 17 features as input.
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\app.py", line 232, in <module>
+    predictions_dict, recommendations = predict_pipeline_instance.predict(input_features)
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\Desktop\ML_Project\src\Pipeline\predict_pipeline.py", line 34, in predict
+    logging.error(f"Error loading model, preprocessor, or feature columns in PredictPipeline: {e}", exc_info=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\multioutput.py", line 306, in predict
+    y = Parallel(n_jobs=self.n_jobs)(
+        delayed(e.predict)(X) for e in self.estimators_
+    )
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 374, in predict
+    scores = self.decision_function(X)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\linear_model\_base.py", line 351, in decision_function
+    X = validate_data(self, X, accept_sparse="csr", reset=False)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2965, in validate_data
+    _check_n_features(_estimator, X, reset=reset)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\validation.py", line 2829, in _check_n_features
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: X has 22 features, but LogisticRegression is expecting 17 features as input.
+2025-08-28 16:50:30,733 INFO - data_ingestion - Starting data ingestion process.
+2025-08-28 16:50:30,740 INFO - data_ingestion - Raw data loaded from Raw_data\health_dataset_with_issues.csv with shape (1000, 22)
+2025-08-28 16:50:30,752 INFO - data_ingestion - Data ingestion complete. Train data saved to artifacts\train.csv
+2025-08-28 16:50:30,752 INFO - data_ingestion - Test data saved to artifacts\test.csv
+2025-08-28 16:50:30,753 INFO - data_ingestion - Data ingestion completed. Train path: artifacts\train.csv, Test path: artifacts\test.csv
+2025-08-28 16:54:30,460 INFO - data_transform - Starting data ingestion process.
+2025-08-28 16:54:30,465 INFO - data_transform - Raw data loaded from Raw_data\health_dataset_with_issues.csv with shape (1000, 22)
+2025-08-28 16:54:30,477 INFO - data_transform - Data ingestion complete. Train data saved to artifacts\train.csv
+2025-08-28 16:54:30,477 INFO - data_transform - Test data saved to artifacts\test.csv
+2025-08-28 16:54:30,478 INFO - data_transform - Data ingestion completed. Train path: artifacts\train.csv, Test path: artifacts\test.csv
+2025-08-28 16:59:12,811 INFO - data_transform - Starting data transformation process.
+2025-08-28 16:59:12,819 INFO - data_transform - Loaded raw train_df: (800, 22), test_df: (200, 22)
+2025-08-28 16:59:12,832 INFO - data_transform - Binary target columns encoded.
+2025-08-28 16:59:12,837 INFO - data_transform - Missing values in raw data filled using ffill.
+2025-08-28 16:59:12,840 INFO - data_transform - Data split into X_train_raw: (800, 11), X_test_raw: (200, 11)
+2025-08-28 16:59:12,842 INFO - data_transform - Fitting preprocessor on X_train_raw...
+2025-08-28 16:59:12,853 INFO - utils - Object successfully saved to artifacts\preprocessor.pkl
+2025-08-28 16:59:12,854 INFO - data_transform - Preprocessor saved to artifacts\preprocessor.pkl
+2025-08-28 16:59:12,860 INFO - data_transform - Features transformed using preprocessor.
+2025-08-28 16:59:12,862 INFO - utils - Object successfully saved to artifacts\feature_columns.pkl
+2025-08-28 16:59:12,862 INFO - data_transform - Feature column names saved to artifacts\feature_columns.pkl: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes']
+2025-08-28 16:59:12,879 INFO - data_transform - Processed train/test data saved to artifacts\train_processed.csv and artifacts\test_processed.csv
+2025-08-28 16:59:12,880 INFO - data_transform - Data transformation complete. Processed train path: artifacts\train_processed.csv
+2025-08-28 17:01:56,692 INFO - model_trainer - ModelTrainer initialized for Multi-Output Classification.
+2025-08-28 17:01:56,692 INFO - model_trainer - Starting model training process for Multi-Output Classification.
+2025-08-28 17:01:56,698 INFO - model_trainer - Loaded preprocessed train_df with shape (800, 33) and test_df with shape (200, 33)
+2025-08-28 17:01:56,699 INFO - model_trainer - Columns in train_df AFTER preprocessing: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 17:01:56,700 INFO - model_trainer - Columns in test_df AFTER preprocessing: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes', 'HeartDisease', 'Diabetes', 'Hypertension', 'Asthma', 'KidneyDisease', 'LiverDisease', 'Cancer', 'Obesity', 'Arthritis', 'COPD', 'MentalHealthIssue']
+2025-08-28 17:01:56,700 INFO - utils - Object successfully loaded from artifacts\feature_columns.pkl
+2025-08-28 17:01:56,700 INFO - model_trainer - Loaded feature columns from artifacts\feature_columns.pkl: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes']
+2025-08-28 17:01:56,702 INFO - model_trainer - Data split. X_train shape: (800, 22), y_train shape: (800, 11)
+2025-08-28 17:01:56,702 INFO - model_trainer - X_test shape: (200, 22), y_test shape: (200, 11)
+2025-08-28 17:01:56,702 INFO - model_trainer - Evaluating models with GridSearchCV...
+2025-08-28 17:01:56,702 INFO - utils - Starting model evaluation in utils.py...
+2025-08-28 17:01:56,702 INFO - utils - Evaluating model: RandomForest
+2025-08-28 17:01:56,703 INFO - utils - Applying GridSearchCV for RandomForest with params: {'estimator__n_estimators': [50, 100], 'estimator__max_depth': [None, 10]}
+2025-08-28 17:02:05,034 INFO - utils - Best parameters for RandomForest: {'estimator__max_depth': 10, 'estimator__n_estimators': 100}
+2025-08-28 17:02:05,187 INFO - utils - Model RandomForest - Train F1-score: 0.9998, Test F1-score: 0.4801
+2025-08-28 17:02:05,187 INFO - utils - Evaluating model: HistGradientBoosting
+2025-08-28 17:02:05,187 INFO - utils - Applying GridSearchCV for HistGradientBoosting with params: {'estimator__max_iter': [100, 200], 'estimator__max_depth': [None, 10]}
+2025-08-28 17:02:11,763 INFO - utils - Best parameters for HistGradientBoosting: {'estimator__max_depth': None, 'estimator__max_iter': 100}
+2025-08-28 17:02:11,828 INFO - utils - Model HistGradientBoosting - Train F1-score: 0.9997, Test F1-score: 0.4929
+2025-08-28 17:02:11,829 INFO - utils - Evaluating model: DecisionTree
+2025-08-28 17:02:11,829 INFO - utils - Applying GridSearchCV for DecisionTree with params: {'estimator__max_depth': [5, 10], 'estimator__min_samples_leaf': [1, 5]}
+2025-08-28 17:02:12,021 INFO - utils - Best parameters for DecisionTree: {'estimator__max_depth': 5, 'estimator__min_samples_leaf': 1}
+2025-08-28 17:02:12,038 INFO - utils - Model DecisionTree - Train F1-score: 0.5756, Test F1-score: 0.4063
+2025-08-28 17:02:12,038 INFO - utils - Evaluating model: GradientBoosting
+2025-08-28 17:02:12,038 INFO - utils - Applying GridSearchCV for GradientBoosting with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 17:02:15,945 INFO - utils - Best parameters for GradientBoosting: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 100}
+2025-08-28 17:02:15,980 INFO - utils - Model GradientBoosting - Train F1-score: 0.7655, Test F1-score: 0.4935
+2025-08-28 17:02:15,980 INFO - utils - Evaluating model: AdaBoost
+2025-08-28 17:02:15,981 INFO - utils - Applying GridSearchCV for AdaBoost with params: {'estimator__n_estimators': [50, 100], 'estimator__learning_rate': [0.05, 0.1]}
+2025-08-28 17:02:20,104 INFO - utils - Best parameters for AdaBoost: {'estimator__learning_rate': 0.05, 'estimator__n_estimators': 100}
+2025-08-28 17:02:20,321 INFO - utils - Model AdaBoost - Train F1-score: 0.3746, Test F1-score: 0.3352
+2025-08-28 17:02:20,321 INFO - utils - Evaluating model: LogisticRegression
+2025-08-28 17:02:20,342 INFO - utils - No specific hyperparameters for LogisticRegression, using default MultiOutputClassifier.
+2025-08-28 17:02:20,360 INFO - utils - Model LogisticRegression - Train F1-score: 0.5399, Test F1-score: 0.5092
+2025-08-28 17:02:20,361 INFO - utils - Model evaluation completed.
+2025-08-28 17:02:20,361 INFO - model_trainer - Model evaluation report (F1 Score): {'RandomForest': 0.4800973652325057, 'HistGradientBoosting': 0.49286850976629526, 'DecisionTree': 0.4063419005438499, 'GradientBoosting': 0.4935080203295586, 'AdaBoost': 0.3352493193750625, 'LogisticRegression': 0.5091843547553739}
+2025-08-28 17:02:20,362 INFO - model_trainer - Best found model: LogisticRegression with F1-score: 0.5091843547553739
+2025-08-28 17:02:20,381 INFO - model_trainer - Final MultiOutputClassifier trained with the best base model.
+2025-08-28 17:02:20,385 INFO - utils - Object successfully saved to artifacts\model.pkl
+2025-08-28 17:02:20,386 INFO - model_trainer - Model saved to artifacts\model.pkl
+2025-08-28 17:02:20,393 INFO - model_trainer - Macro F1-score on test set with best model: 0.5091843547553739
+2025-08-28 17:02:20,393 INFO - model_trainer - Model training completed successfully for Multi-Output Classification.
+2025-08-28 17:06:11,242 INFO - predict_pipeline - Running PredictPipeline directly for testing purposes.
+2025-08-28 17:06:12,254 INFO - predict_pipeline - Model loaded from artifacts\model.pkl
+2025-08-28 17:06:12,299 INFO - predict_pipeline - Preprocessor loaded from artifacts\preprocessor.pkl
+2025-08-28 17:06:12,299 INFO - predict_pipeline - Feature columns loaded from artifacts\feature_columns.pkl: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes']
+2025-08-28 17:06:12,301 DEBUG - predict_pipeline - DataFrame columns before preprocessor transform: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes']
+2025-08-28 17:06:12,302 DEBUG - predict_pipeline - DataFrame shape before preprocessor transform: (1, 22)
+2025-08-28 17:06:12,302 ERROR - predict_pipeline - Error during direct PredictPipeline test: columns are missing: {'Sex', 'AlcoholConsumption', 'BMI', 'GlucoseLevel', 'Smoker', 'BloodPressure', 'DietQuality', 'Age', 'PhysicalActivity', 'FamilyHistory', 'CholesterolLevel'}
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\src\Pipeline\predict_pipeline.py", line 131, in <module>
+    predictions, recommendations = pipeline.predict(dummy_features)
+                                   ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\yedug\Desktop\ML_Project\src\Pipeline\predict_pipeline.py", line 84, in predict
+    transformed_features = self.preprocessor.transform(df_for_preprocessor)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\yedug\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1090, in transform
+    raise ValueError(f"columns are missing: {diff}")
+ValueError: columns are missing: {'Sex', 'AlcoholConsumption', 'BMI', 'GlucoseLevel', 'Smoker', 'BloodPressure', 'DietQuality', 'Age', 'PhysicalActivity', 'FamilyHistory', 'CholesterolLevel'}
+2025-08-28 17:07:08,641 INFO - predict_pipeline - Running PredictPipeline directly for testing purposes.
+2025-08-28 17:07:09,368 INFO - predict_pipeline - Model loaded from artifacts\model.pkl
+2025-08-28 17:07:09,401 INFO - predict_pipeline - Preprocessor loaded from artifacts\preprocessor.pkl
+2025-08-28 17:07:09,401 INFO - predict_pipeline - Feature columns loaded from artifacts\feature_columns.pkl: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes']
+2025-08-28 17:07:09,402 DEBUG - predict_pipeline - DataFrame columns before preprocessor transform: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory']
+2025-08-28 17:07:09,402 DEBUG - predict_pipeline - DataFrame shape before preprocessor transform: (1, 11)
+2025-08-28 17:07:09,407 INFO - predict_pipeline - Features transformed by preprocessor.
+2025-08-28 17:07:09,414 INFO - predict_pipeline - Raw model predictions: [[1. 0. 0. 0. 1. 0. 0. 0. 1. 1. 1.]]
+2025-08-28 17:07:09,414 INFO - predict_pipeline - Formatted prediction results: {'HeartDisease': 1, 'Diabetes': 0, 'Hypertension': 0, 'Asthma': 0, 'KidneyDisease': 1, 'LiverDisease': 0, 'Cancer': 0, 'Obesity': 0, 'Arthritis': 1, 'COPD': 1, 'MentalHealthIssue': 1}
+2025-08-28 17:07:09,415 INFO - predict_pipeline - --- TEST PREDICTION RESULTS ---
+2025-08-28 17:07:09,415 INFO - predict_pipeline - Predictions: {'HeartDisease': 1, 'Diabetes': 0, 'Hypertension': 0, 'Asthma': 0, 'KidneyDisease': 1, 'LiverDisease': 0, 'Cancer': 0, 'Obesity': 0, 'Arthritis': 1, 'COPD': 1, 'MentalHealthIssue': 1}
+2025-08-28 17:07:09,415 INFO - predict_pipeline - Recommendations: ['Reduce salt intake, exercise regularly, and avoid smoking.', 'Stay hydrated and avoid excessive salt/protein.', 'Do light exercises, maintain joint mobility, and avoid excessive strain.', 'Avoid smoking, stay away from pollutants, and do breathing exercises.', 'Practice stress management, meditation, or seek counseling.', 'It is highly recommended to consult a healthcare professional for personalized advice based on these predictive analytics.']
+2025-08-28 17:07:09,415 INFO - predict_pipeline - --- END TEST ---
+2025-08-28 17:09:08,841 INFO - predict_pipeline - Model loaded from artifacts\model.pkl
+2025-08-28 17:09:08,935 INFO - predict_pipeline - Preprocessor loaded from artifacts\preprocessor.pkl
+2025-08-28 17:09:08,936 INFO - predict_pipeline - Feature columns loaded from artifacts\feature_columns.pkl: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes']
+2025-08-28 17:09:08,936 INFO - app - PredictPipeline loaded successfully.
+2025-08-28 17:09:11,924 DEBUG - predict_pipeline - DataFrame columns before preprocessor transform: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory']
+2025-08-28 17:09:11,925 DEBUG - predict_pipeline - DataFrame shape before preprocessor transform: (1, 11)
+2025-08-28 17:09:11,943 INFO - predict_pipeline - Features transformed by preprocessor.
+2025-08-28 17:09:11,957 INFO - predict_pipeline - Raw model predictions: [[1. 0. 1. 1. 0. 0. 0. 0. 0. 1. 0.]]
+2025-08-28 17:09:11,958 INFO - predict_pipeline - Formatted prediction results: {'HeartDisease': 1, 'Diabetes': 0, 'Hypertension': 1, 'Asthma': 1, 'KidneyDisease': 0, 'LiverDisease': 0, 'Cancer': 0, 'Obesity': 0, 'Arthritis': 0, 'COPD': 1, 'MentalHealthIssue': 0}
+2025-08-28 17:10:13,495 DEBUG - predict_pipeline - DataFrame columns before preprocessor transform: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory']
+2025-08-28 17:10:13,496 DEBUG - predict_pipeline - DataFrame shape before preprocessor transform: (1, 11)
+2025-08-28 17:10:13,503 INFO - predict_pipeline - Features transformed by preprocessor.
+2025-08-28 17:10:13,510 INFO - predict_pipeline - Raw model predictions: [[1. 0. 1. 1. 1. 0. 0. 0. 0. 1. 1.]]
+2025-08-28 17:10:13,510 INFO - predict_pipeline - Formatted prediction results: {'HeartDisease': 1, 'Diabetes': 0, 'Hypertension': 1, 'Asthma': 1, 'KidneyDisease': 1, 'LiverDisease': 0, 'Cancer': 0, 'Obesity': 0, 'Arthritis': 0, 'COPD': 1, 'MentalHealthIssue': 1}
+2025-08-28 17:14:53,734 ERROR - app - Error loading PredictPipeline: name 'PredictPipeline' is not defined
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\app.py", line 93, in load_predict_pipeline_cached
+    pipeline = PredictPipeline()
+               ^^^^^^^^^^^^^^^
+NameError: name 'PredictPipeline' is not defined
+2025-08-28 17:17:44,686 INFO - predict_pipeline - Model loaded from artifacts\model.pkl
+2025-08-28 17:17:44,690 INFO - predict_pipeline - Preprocessor loaded from artifacts\preprocessor.pkl
+2025-08-28 17:17:44,691 INFO - predict_pipeline - Feature columns loaded from artifacts\feature_columns.pkl: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes']
+2025-08-28 17:17:44,692 INFO - app - PredictPipeline loaded successfully.
+2025-08-28 17:25:49,929 ERROR - app - Error loading PredictPipeline: name 'pp_module' is not defined
+Traceback (most recent call last):
+  File "C:\Users\yedug\Desktop\ML_Project\app.py", line 94, in load_predict_pipeline_cached
+    pipeline = pp_module.PredictPipeline()
+               ^^^^^^^^^
+NameError: name 'pp_module' is not defined
+2025-08-28 17:34:08,572 INFO - predict_pipeline - Model loaded from artifacts\model.pkl
+2025-08-28 17:34:08,713 INFO - predict_pipeline - Preprocessor loaded from artifacts\preprocessor.pkl
+2025-08-28 17:34:08,714 INFO - predict_pipeline - Feature columns loaded from artifacts\feature_columns.pkl: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes']
+2025-08-28 17:34:08,715 INFO - app - PredictPipeline loaded successfully.
+2025-08-28 17:34:11,730 DEBUG - predict_pipeline - DataFrame columns before preprocessor transform: ['Age', 'Sex', 'BMI', 'Smoker', 'AlcoholConsumption', 'PhysicalActivity', 'DietQuality', 'BloodPressure', 'GlucoseLevel', 'CholesterolLevel', 'FamilyHistory']
+2025-08-28 17:34:11,731 DEBUG - predict_pipeline - DataFrame shape before preprocessor transform: (1, 11)
+2025-08-28 17:34:11,775 INFO - predict_pipeline - Features transformed by preprocessor.
+2025-08-28 17:34:11,794 INFO - predict_pipeline - Raw model predictions: [[1. 0. 1. 1. 0. 0. 0. 0. 0. 1. 0.]]
+2025-08-28 17:34:11,794 INFO - predict_pipeline - Formatted prediction results: {'HeartDisease': 1, 'Diabetes': 0, 'Hypertension': 1, 'Asthma': 1, 'KidneyDisease': 0, 'LiverDisease': 0, 'Cancer': 0, 'Obesity': 0, 'Arthritis': 0, 'COPD': 1, 'MentalHealthIssue': 0}
+2025-08-28 17:36:49,600 INFO - predict_pipeline - Model loaded from artifacts\model.pkl
+2025-08-28 17:36:49,747 INFO - predict_pipeline - Preprocessor loaded from artifacts\preprocessor.pkl
+2025-08-28 17:36:49,748 INFO - predict_pipeline - Feature columns loaded from artifacts\feature_columns.pkl: ['num__Age', 'num__BMI', 'num__GlucoseLevel', 'num__CholesterolLevel', 'cat__Sex_Female', 'cat__Sex_Male', 'cat__Smoker_No', 'cat__Smoker_Yes', 'cat__AlcoholConsumption_High', 'cat__AlcoholConsumption_Low', 'cat__AlcoholConsumption_Moderate', 'cat__PhysicalActivity_Active', 'cat__PhysicalActivity_Moderate', 'cat__PhysicalActivity_Sedentary', 'cat__DietQuality_Average', 'cat__DietQuality_Good', 'cat__DietQuality_Poor', 'cat__BloodPressure_Hypertension', 'cat__BloodPressure_Normal', 'cat__BloodPressure_Prehypertension', 'cat__FamilyHistory_No', 'cat__FamilyHistory_Yes']
+2025-08-28 17:36:49,749 INFO - app - PredictPipeline loaded successfully.
